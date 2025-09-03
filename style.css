@@ -1,0 +1,256 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;  /* dark track */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FFD700, #FFA500); /* gold gradient */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFD700; /* solid gold on hover */
+  box-shadow: 0 0 15px gold, 0 0 30px rgba(255,215,0,0.8);
+}
+
+/* Firefox support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #FFD700 #111;
+}
+
+  .about-text {
+    max-width: 800px;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #ddd; /* soft white for readability */
+  }
+  #about h2 {
+    font-weight: 600;
+  }
+    body {
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #f5f5f5;
+    }
+    nav {
+      box-shadow: 0 2px 15px rgba(255,215,0,0.3);
+      background: #111 !important;
+    }
+    nav a.nav-link.active {
+  color: gold !important;
+  text-shadow: 0 0 12px gold, 0 0 24px rgba(255,215,0,0.8);
+  font-weight: 700;
+}
+
+    .navbar-nav { margin: auto; }
+    nav a.nav-link {
+      color: silver !important;
+      transition: 0.3s;
+    }
+    nav a.nav-link:hover,
+    nav a.nav-link.active {
+      color: gold !important;
+      text-shadow: 0 0 8px gold;
+    }
+
+    .gold-text {
+      background: linear-gradient(90deg, #FFD700, #FFA500);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .silver-text {
+      background: linear-gradient(90deg, #C0C0C0, #E0E0E0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    #home {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .typing {
+      font-size: 1.5rem;
+      margin-top: 10px;
+      font-weight: 600;
+      color: #FFD700;
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #FFD700;
+      text-shadow: 0 0 15px rgba(255,215,0,0.6);
+    }
+    .skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 6px solid gold;
+  border-radius: 10px;
+  padding: 15px 20px;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(255,215,0,0.2);
+}
+.skill-card:hover {
+  transform: translateX(10px);
+  background: rgba(255, 215, 0, 0.1);
+  box-shadow: 0 0 20px gold;
+  color: gold;
+}
+.skill-card i {
+  font-size: 1.8rem;
+  color: #FFD700;
+}
+
+
+    .skill-card, .project-card, .certificate-card {
+      border: 2px solid #FFD700;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      font-weight: 600;
+      background: #111;
+      color: silver;
+      transition: 0.4s;
+    }
+    .skill-card:hover, .project-card:hover, .certificate-card:hover {
+      transform: translateY(-10px);
+      background: #000;
+      color: gold;
+      box-shadow: 0 0 20px rgba(255,215,0,0.7);
+    }
+    .skill-card i, .project-card i, .certificate-card i {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #FFD700;
+    }
+    .skill-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 30px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 140px; /* fixed height to make square */
+}
+.skill-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 215, 0, 0.15);
+}
+.skill-card i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #FFD700;
+}
+.skill-card p {
+  margin: 0;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+    .btn-glow {
+      background: transparent;
+      border: 2px solid gold;
+      color: gold;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .btn-glow:hover {
+      background: gold;
+      color: black;
+      box-shadow: 0 0 15px gold;
+    }
+    .project-img {
+  width: 100%;
+  max-height: 250px;   /* keeps both screenshots same height */
+  object-fit: cover;   /* crops excess without stretching */
+  border: 2px solid gold;
+}
+
+
+    #contact form input,
+    #contact form textarea {
+      background: #111;
+      color: white;
+      border: 1px solid silver;
+    }
+    #contact form input:focus,
+    #contact form textarea:focus {
+      border-color: gold;
+      box-shadow: 0 0 8px gold;
+      outline: none;
+    }
+.certificate-img {
+  width: 100%;
+  max-height: 180px;   /* keeps all certificate images the same height */
+  object-fit: cover;   /* avoids stretching */
+  border: 2px solid gold;
+}
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 3px solid gold;
+      margin: 20px auto;
+      display: block;
+    }
+
+    .social-icons a {
+      color: silver;
+      font-size: 1.8rem;
+      margin: 0 10px;
+      transition: 0.3s;
+    }
+    .social-icons a:hover {
+      color: gold;
+      text-shadow: 0 0 10px gold;
+    }
+    .education-year {
+  color: rgba(255, 215, 0, 0.9); /* gold with high opacity */
+  font-weight: 600;
+  display: block;
+  margin-top: 5px;
+}
+
+#hireme {
+  padding: 80px 0;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px); 
+  border-radius: 15px;
+}
+#hireme .form-control {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+  padding: 14px;
+  font-size: 1rem;
+}
+#hireme .form-control::placeholder {
+  color: #ddd;
+}
+
+
+    footer {
+      background: #111;
+      border-top: 2px solid gold;
+    }
+ 
