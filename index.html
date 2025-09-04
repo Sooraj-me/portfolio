@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,8 +11,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<!-- AOS Animation CSS -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -21,45 +21,45 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
+    <a class="navbar-brand fw-bold gold-text" href="#home"><h6 style="color: #1C1978;">Sooraj</h6></a>
+    <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="fas fa-bars"></span>
+    </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mx-auto">
+      <ul class="navbar-nav ms-auto text-center">
         <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
-        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li> <!-- ✅ New Button -->
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
         <li class="nav-item"><a class="nav-link" href="#hireme">Hire Me</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<section id="home">
+<!-- Home -->
+<section id="home" data-aos="fade-up">
   <div class="container">
-    <!-- Profile Image moved here --><br><br><br>
+    <br><br><br>
     <img src="https://avatars.githubusercontent.com/u/196331818?s=400&u=f3a87a1b018fe2f5b0e62eb2478c1f0516a7d4d0&v=4" 
          alt="Profile" class="profile-img">
-
-    <br>
-         <h1 class="display-4 fw-bold">Hi, I'm <span class="gold-text">Sooraj R Nair</span></h1>
+    <h1 class="display-4 fw-bold">Hi, I'm <span class="gold-text">Sooraj R Nair</span></h1>
     <div class="typing" id="typing-text"></div>
     <div class="social-icons mt-3">
-      <br>
-      <a href="https://www.linkedin.com/in/sooraj-r-nair-38757925a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.linkedin.com/in/sooraj-r-nair-38757925a" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://github.com/sooraj-me" target="_blank"><i class="fab fa-github"></i></a>
       <a href="mailto:soorajshangu@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
   </div>
-</section><br>
+</section>
 
-
-<!-- About Me -->
-<!-- About Me -->
-<section id="about" class="py-5 text-center text-white">
+<!-- About -->
+<section id="about" class="py-5 text-center text-white" data-aos="fade-right">
   <div class="container">
     <h2 class="mb-4">About Me</h2>
-    <p class="about-text mx-auto">
+ <p class="about-text mx-auto">
       Hello!, I’m <strong class="text-info">Sooraj R Nair</strong>, a passionate 
       <span class="text-warning">Full Stack Developer</span> with expertise in 
       <span class="text-success">Frontend</span>, <span class="text-primary">Backend</span>, 
@@ -70,26 +70,13 @@
   </div>
 </section>
 
-<!-- Extra Styling -->
-
-
-
-
-<!-- Extra Styling -->
-
-  
-
-
 <!-- Skills -->
 <section id="skills" class="py-5 text-center">
   <div class="container">
-    <h2 class="fw-bold mb-5">Skills</h2>
-    <div class="row justify-content-center">
+    <h2 class="mb-4"><strong>Skills</strong></h2>
+    <div class="row g-4 justify-content-center">
 
-      <!-- Skill Item -->
-      <!-- Skills Section -->
-
-      <!-- HTML -->
+      <!-- Skill 1 -->
       <div class="col-6">
         <div class="skill-card d-flex align-items-center justify-content-start p-3">
           <i class="fab fa-html5 me-3 text-danger" style="font-size: 32px;"></i>
@@ -104,11 +91,11 @@
           <h5 class="mb-0">CSS</h5>
         </div>
       </div>
-       <!-- Bootstrap -->
-     <br>
-       <div class="col-6">
+
+      <!-- Bootstrap -->
+      <div class="col-6">
         <div class="skill-card d-flex align-items-center justify-content-start p-3">
-          <i class="fab fa-bootstrap me-3 text-purple" style="font-size: 32px;"></i>
+          <i class="fab fa-bootstrap me-3" style="font-size: 32px; color: #7952b3;"></i>
           <h5 class="mb-0">Bootstrap</h5>
         </div>
       </div>
@@ -121,8 +108,6 @@
         </div>
       </div>
 
-     
-
       <!-- Python -->
       <div class="col-6">
         <div class="skill-card d-flex align-items-center justify-content-start p-3">
@@ -134,12 +119,10 @@
       <!-- DSA -->
       <div class="col-6">
         <div class="skill-card d-flex align-items-center justify-content-start p-3">
-          <i class="fas fa-code me-3 text-dark" style="font-size: 32px;"></i>
+          <i class="fas fa-code me-3 text-secondary" style="font-size: 32px;"></i>
           <h5 class="mb-0">DSA</h5>
         </div>
       </div>
-
-   
 
       <!-- MySQL -->
       <div class="col-6">
@@ -163,39 +146,31 @@
   </div>
 </section>
 
-<!-- Projects -->
-<!-- Projects -->
-<section id="projects" class="py-5">
-  <div class="container text-center">
-    <h2>Projects</h2>
-    <div class="row g-4 justify-content-center">
 
-      <!-- File Sharing Application Card -->
-      <div class="col-md-6 col-lg-5 d-flex">
-        <div class="project-card p-4 w-100 h-100 d-flex flex-column">
-          <img src="https://i.postimg.cc/6QPFqPgp/file.jpg" alt="File Sharing App"
-               class="img-fluid rounded mb-3 project-img">
+
+<!-- Projects -->
+<section id="projects" class="py-5" data-aos="fade-up">
+  <div class="container text-center">
+    <h2><strong>Projects</strong></h2>
+    <div class="row g-4">
+      
+      <div class="col-md-6">
+        <div class="project-card p-4">
+          <img src="https://i.postimg.cc/6QPFqPgp/file.jpg" 
+               class="img-fluid project-img rounded mb-3">
           <h5><strong>File Sharing Application</strong></h5>
-          <p>MERN stack app to upload files, generate links, and share them.</p>
-          <div class="mt-auto">
-            <a href="https://filesharingapplication-9nss.onrender.com/" target="_blank"
-               class="btn btn-glow btn-sm mt-2">Live Demo</a>
-          </div>
+          <p>MERN stack app to upload files, generate shareable links, and download</p>
+          <a href="https://filesharingapplication-9nss.onrender.com/" target="_blank" class="btn btn-glow btn-sm">Live Demo</a>
         </div>
       </div>
 
-      <!-- Find Movies Application Card -->
-      <div class="col-md-6 col-lg-5 d-flex">
-        <div class="project-card p-4 w-100 h-100 d-flex flex-column">
-          <img src="https://i.postimg.cc/zXSBhwJr/Whats-App-Image-2025-09-03-at-21-18-27-95b120b0.jpg"
-               alt="Find Movies App Screenshot"
-               class="img-fluid rounded mb-3 project-img">
-          <h5><strong>Find Movies Application</strong></h5>
-          <p>React app to search and discover movies with details.</p>
-          <div class="mt-auto">
-            <a href="https://profound-chimera-fa92d7.netlify.app/" target="_blank"
-               class="btn btn-glow btn-sm mt-2">Live Demo</a>
-          </div>
+      <div class="col-md-6">
+        <div class="project-card p-4">
+          <img src="https://i.postimg.cc/zXSBhwJr/Whats-App-Image-2025-09-03-at-21-18-27-95b120b0.jpg" 
+               class="img-fluid project-img rounded mb-3">
+          <h5><strong>Find Movies App</strong></h5>
+          <p>React app to search and discover movies with details</p>
+          <a href="https://profound-chimera-fa92d7.netlify.app/" target="_blank" class="btn btn-glow btn-sm">Live Demo</a>
         </div>
       </div>
 
@@ -203,18 +178,14 @@
   </div>
 </section>
 
-
-
-
-<!-- Certificates -->
 <!-- Certificates -->
 <section id="certificates" class="py-5">
   <div class="container text-center">
-    <h2>Certificates</h2>
+    <h2 data-aos="fade-up"><strong>Certificates</strong></h2>
     <div class="row g-4">
 
       <!-- Python Certificate -->
-      <div class="col-md-6 col-lg-3">
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
         <a href="https://www.udemy.com/certificate/UC-344558b7-62c7-4b78-9bd2-a5baa07ef0ac/" target="_blank">
           <div class="certificate-card p-4">
             <img src="https://i.postimg.cc/htY62wsR/python.jpg" alt="Python Certificate"
@@ -226,19 +197,19 @@
       </div>
 
       <!-- Python for Data Science -->
-      <div class="col-md-6 col-lg-3">
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
         <a href="https://courses.cognitiveclass.ai/certificates/ed58eb63ac9c481d8ee1f73abfe00644#" target="_blank">
           <div class="certificate-card p-4">
             <img src="https://i.postimg.cc/cL3BNbZS/datascience.png" alt="Python for Data Science"
                  class="img-fluid rounded mb-3 certificate-img">
             <i class="fas fa-database"></i>
-            <h6>IBM Python for Data Science certificate </h6>
+            <h6>IBM Python for Data Science certificate</h6>
           </div>
         </a>
       </div>
 
       <!-- Machine Learning -->
-      <div class="col-md-6 col-lg-3">
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
         <a href="https://trainings.internshala.com/view_certificate/1d3q1sbhatk/2mgmvva66zq" target="_blank">
           <div class="certificate-card p-4">
             <img src="https://i.postimg.cc/XNh57ks7/machine-learning.png" alt="Machine Learning"
@@ -250,7 +221,7 @@
       </div>
 
       <!-- Artificial Intelligence -->
-      <div class="col-md-6 col-lg-3">
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
         <a href="https://www.udemy.com/certificate/UC-3a5ee6c0-8808-4119-96c7-3784a2a469fa/" target="_blank">
           <div class="certificate-card p-4">
             <img src="https://i.postimg.cc/Jh2XD3Rq/AI.jpg" alt="Artificial Intelligence"
@@ -264,18 +235,21 @@
     </div>
   </div>
 </section>
+
+
 <!-- Education -->
-<section id="education" class="py-5">
+<section id="education" class="py-5" data-aos="zoom-in">
   <div class="container text-center">
-    <h2>Education</h2>
+
+<h2><strong>Education</strong></h2>
     <div class="row g-4 justify-content-center">
       
       <!-- Bachelor -->
       <div class="col-md-6 col-lg-4">
         <div class="certificate-card p-4">
           <i class="fas fa-graduation-cap fa-2x mb-3"></i>
-          <h6><strong>Bachelor of Computer Science and Engineering</strong></h6>
-          <p class="mb-1">Sri Ramakrishna Institute of Technology</p>
+          <h5><strong>Bachelor of Computer Science and Engineering</strong></h5>
+         <br> <p class="mb-1">Sri Ramakrishna Institute of Technology</p>
           <span class="education-year">2022 – 2026</span>
         </div>
       </div>
@@ -284,8 +258,8 @@
       <div class="col-md-6 col-lg-4">
         <div class="certificate-card p-4">
           <i class="fas fa-school fa-2x mb-3"></i>
-          <h6><strong>Higher Secondary Certificate</strong></h6>
-          <p class="mb-1">Vasavi Vidyalaya Matriculation Higher Secondary School</p>
+          <h5><strong>Higher Secondary Certificate</strong></h5>
+         <br> <p class="mb-1">Vasavi Vidyalaya Matriculation Higher Secondary School</p>
           <span class="education-year">2020 – 2022</span>
         </div>
       </div>
@@ -294,7 +268,7 @@
       <div class="col-md-6 col-lg-4">
         <div class="certificate-card p-4">
           <i class="fas fa-book-open fa-2x mb-3"></i>
-          <h6><strong>Secondary School Leaving Certificate</strong></h6>
+          <h5><strong>Secondary School Leaving Certificate</strong></h5>
           <p class="mb-1">Vasavi Vidyalaya Matriculation Higher Secondary School</p>
           <span class="education-year">2020</span>
         </div>
@@ -304,14 +278,12 @@
   </div>
 </section>
 
-
-<!-- Contact -->
-<section id="hireme" class="py-5">
+<!-- Hire Me -->
+<section id="hireme" class="py-5" style="background: transparent;">
   <div class="container text-center">
-    <h2>Hire Me</h2>
-    <form action="https://api.web3forms.com/submit" method="POST" 
-          class="shadow p-5 bg-black border border-gold rounded mx-auto" 
-          style="max-width: 750px">
+    <h2><strong>Hire Me</strong></h2>
+    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" 
+          style="max-width: 750px; background: transparent; border: none; margin: 0 auto; padding: 0;">
 
       <!-- Web3Forms Access Key -->
       <input type="hidden" name="access_key" value="204601a3-2ed4-42b8-96f6-cb8f763605d2">
@@ -330,7 +302,36 @@
 
       <button class="btn btn-glow w-100 mt-3">Send</button>
     </form>
+  </div>
+</section>
 
+
+<script>
+  // Reset form after successful submission
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // prevent default submit
+    const form = this;
+
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+    }).then(response => {
+      if (response.ok) {
+        confirm("✅ Message sent successfully!");
+        form.reset(); // clear fields
+      } else {
+        alert("❌ Something went wrong. Please try again.");
+      }
+    }).catch(() => {
+      alert("⚠️ Network error. Please try later.");
+    });
+  });
+</script>
+
+<br>
+<section class="text-center">
+  <div class="container">
+    <h6 style="color: gold;">Connect with Me</h6>
     <div class="social-icons mt-4">
       <a href="https://www.linkedin.com/in/sooraj-r-nair-38757925a" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://github.com/sooraj-me" target="_blank"><i class="fab fa-github"></i></a>
@@ -338,8 +339,6 @@
     </div>
   </div>
 </section>
-
-
 <!-- Footer -->
 <footer class="text-light text-center py-3">
   <p class="silver-text">Made with <span class="text-danger">❤</span> by Sooraj</p>
@@ -349,34 +348,83 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init({
-    duration: 1200,   // animation speed
-    once: true,       // animate only once
-    offset: 80        // start a little earlier
-  });
+  AOS.init({ duration: 1000, once: true });
 </script>
 
-</script>
+<!-- Typing Effect -->
 <script>
   const texts = ["Full Stack Developer", "Frontend Specialist", "Backend Expert"];
   let count = 0, index = 0, currentText = "", letter = "";
-
   function type() {
     if (count === texts.length) count = 0;
     currentText = texts[count];
     letter = currentText.slice(0, ++index);
-
     document.getElementById("typing-text").textContent = letter;
-    if (letter.length === currentText.length) {
-      count++;
-      index = 0;
-      setTimeout(type, 1500);
-    } else {
-      setTimeout(type, 100);
-    }
+    if (letter.length === currentText.length) { count++; index = 0; setTimeout(type, 1500);}
+    else { setTimeout(type, 100); }
   }
   type();
 </script>
+
+<!-- Mouse Pointer Glow -->
+<script>
+  document.addEventListener("mousemove", e => {
+    let glow = document.createElement("div");
+    glow.className = "cursor-glow";
+    glow.style.left = e.pageX + "px";
+    glow.style.top = e.pageY + "px";
+    document.body.appendChild(glow);
+    setTimeout(() => glow.remove(), 500);
+  });
 </script>
+
+<style>
+/* Navbar */
+nav {
+  background:#111 !important;
+  box-shadow:0 2px 15px rgba(255,215,0,0.3);
+}
+.navbar-brand { color:gold; font-size:1.3rem; }
+.navbar-toggler { border:none; }
+.navbar-toggler span { color:gold; font-size:1.5rem; }
+nav a.nav-link { color:silver !important; transition:0.3s; }
+nav a.nav-link:hover, nav a.nav-link.active { color:gold !important; text-shadow:0 0 8px gold; }
+
+/* Cursor Glow */
+.cursor-glow {
+  position:absolute;
+  width:20px; height:20px;
+  border-radius:50%;
+  background:radial-gradient(circle, gold, transparent);
+  pointer-events:none;
+  transform:translate(-50%, -50%);
+  animation:fadeOut 0.5s forwards;
+}
+@keyframes fadeOut { to { opacity:0; transform:translate(-50%,-50%) scale(2);} }
+
+/* Responsive Skill Cards */
+.skill-card, .project-card, .certificate-card {
+  border:2px solid gold;
+  border-radius:12px;
+  background:#111;
+  transition:.3s;
+  text-align:center;
+}
+.skill-card:hover, .project-card:hover, .certificate-card:hover {
+  transform:translateY(-8px);
+  box-shadow:0 0 20px gold;
+  color:gold;
+}
+.skill-card i { font-size:40px; color:gold; }
+.project-img { max-height:220px; object-fit:cover; border:2px solid gold; }
+
+/* General */
+body { font-family:'Poppins',sans-serif; background:#000; color:#f5f5f5; scroll-behavior:smooth; }
+section h2 { color:gold; text-transform:uppercase; text-shadow:0 0 12px rgba(255,215,0,.6); }
+.profile-img { width:160px; height:160px; border-radius:50%; border:3px solid gold; margin:20px auto; display:block; }
+.typing { font-size:1.5rem; font-weight:600; color:gold; }
+.gold-text { background:linear-gradient(90deg,#FFD700,#FFA500); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+.silver-text { background:linear-gradient(90deg,#C0C0C0,#E0E0E0); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+</style>
 </body>
 </html>
