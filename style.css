@@ -1,26 +1,25 @@
-/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #111;  /* dark track */
+  background: #111;  
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #FFD700, #FFA500); /* gold gradient */
+  background: linear-gradient(180deg, #FFD700, #FFA500); 
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
   transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #FFD700; /* solid gold on hover */
+  background: #FFD700; 
   box-shadow: 0 0 15px gold, 0 0 30px rgba(255,215,0,0.8);
 }
 
-/* Firefox support */
+
 * {
   scrollbar-width: thin;
   scrollbar-color: #FFD700 #111;
@@ -30,7 +29,7 @@
     max-width: 800px;
     font-size: 1.1rem;
     line-height: 1.9;
-    color: #ddd; /* soft white for readability */
+    color: #ddd; 
   }
   #about h2 {
     font-weight: 600;
@@ -90,7 +89,7 @@
 .about-img {
   width: 180px;
   height: 180px;
-  border-radius: 50%; /* makes it circular */
+  border-radius: 50%; 
   border: 3px solid gold;
   object-fit: cover;
   display: block;
@@ -102,17 +101,14 @@
   object-fit: cover; 
   border: 2px solid gold; 
 }
-/* Bigger images for Experience */
 #experience .project-img {
-  max-height: 350px; /* increase size */
+  max-height: 350px; 
   width: 100%;
   object-fit: cover;
   border: 3px solid gold;
 }
 
-
-
-    section h2 {
+section h2 {
       font-size: 2.2rem;
       margin-bottom: 20px;
       text-transform: uppercase;
@@ -167,12 +163,12 @@
   background: rgba(255, 255, 255, 0.08);
   border-radius: 10px;
   padding: 30px;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: transform 0.3s ease,background 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 140px; /* fixed height to make square */
+  height: 140px; 
 }
 .skill-card:hover {
   transform: translateY(-8px);
@@ -188,9 +184,7 @@
   font-weight: bold;
   color: #fff;
 }
-
-
-    .btn-glow {
+  .btn-glow {
       background: transparent;
       border: 2px solid gold;
       color: gold;
@@ -204,13 +198,11 @@
     }
     .project-img {
   width: 100%;
-  max-height: 250px;   /* keeps both screenshots same height */
-  object-fit: cover;   /* crops excess without stretching */
+  max-height: 250px;   
+  object-fit: cover;   
   border: 2px solid gold;
 }
-
-
-    #contact form input,
+ #contact form input,
     #contact form textarea {
       background: #111;
       color: white;
@@ -224,8 +216,8 @@
     }
 .certificate-img {
   width: 100%;
-  max-height: 180px;   /* keeps all certificate images the same height */
-  object-fit: cover;   /* avoids stretching */
+  max-height: 180px;   
+  object-fit: cover;   
   border: 2px solid gold;
 }
 
@@ -249,7 +241,7 @@
       text-shadow: 0 0 10px gold;
     }
     .education-year {
-  color: rgba(255, 215, 0, 0.9); /* gold with high opacity */
+  color: rgba(255, 215, 0, 0.9); 
   font-weight: 600;
   display: block;
   margin-top: 5px;
@@ -271,8 +263,6 @@
 #hireme .form-control::placeholder {
   color: #ddd;
 }
-
-
     footer {
       background: #111;
       border-top: 2px solid gold;
