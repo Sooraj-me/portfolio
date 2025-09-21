@@ -202,7 +202,8 @@ section h2 {
   object-fit: cover;   
   border: 2px solid gold;
 }
- #contact form input,
+
+    #contact form input,
     #contact form textarea {
       background: #111;
       color: white;
@@ -263,6 +264,8 @@ section h2 {
 #hireme .form-control::placeholder {
   color: #ddd;
 }
+
+
     footer {
       background: #111;
       border-top: 2px solid gold;
