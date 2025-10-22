@@ -292,6 +292,92 @@ section h2 {
 #hireme .form-control::placeholder {
   color: #ddd;
 }
+.experience-section {
+  background: #050505;
+  color: #fff;
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 40px;
+  border-left: 2px solid gold;
+  max-width: 800px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -12px;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  background: gold;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+.timeline-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid #2a2a2a;
+  border-radius: 15px;
+  padding: 20px 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.timeline-card:hover {
+  transform: translateY(-5px);
+  border-color: gold;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.15);
+}
+
+.timeline-card img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 2px solid gold;
+  object-fit: cover;
+}
+
+.timeline-content h5 {
+  color: #FFD700;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.timeline-content p {
+  margin-bottom: 4px;
+  color: #ccc;
+}
+
+.education-year {
+  display: block;
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 25px;
+  }
+  .timeline-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .timeline-card img {
+    margin: 0 auto 10px;
+  }
+}
+
 
 
     footer {
@@ -303,5 +389,6 @@ section h2 {
       padding: 15px 0;
       color: silver;
     }
+
 
 
