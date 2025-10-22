@@ -354,6 +354,20 @@ Built using the MERN stack, this app makes file sharing seamless: Upload any fil
     </form>
   </div>
 </section>
+  <script>
+  document.addEventListener("scroll", function () {
+    const timeline = document.querySelector(".timeline");
+    const rect = timeline.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (rect.top < windowHeight * 0.8) {
+      timeline.classList.add("active");
+    } else {
+      timeline.classList.remove("active");
+    }
+  });
+</script>
+
 
 
 <script>
@@ -496,6 +510,7 @@ section h2 { color:gold; text-transform:uppercase; text-shadow:0 0 12px rgba(255
 </style>
 </body>
 </html>
+
 
 
 
