@@ -129,7 +129,7 @@ nav {
   object-fit: cover; 
   border: 2px solid gold; 
 }
-/* EXPERIENCE SECTION */
+
 .experience-section {
   background: #050505;
   color: #fff;
@@ -144,7 +144,6 @@ nav {
   max-width: 800px;
 }
 
-/* Animated gold line */
 .timeline::before {
   content: "";
   position: absolute;
@@ -232,6 +231,18 @@ nav {
     margin: 0 auto 10px;
   }
 }
+.education-section {
+  background: #0a0a0a;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.education-section h2 {
+  color: #FFD700;
+  letter-spacing: 1px;
+}
+
 
 #experience .project-img {
   max-height: 350px; 
@@ -493,6 +504,7 @@ section h2 {
       padding: 15px 0;
       color: silver;
     }
+
 
 
 
