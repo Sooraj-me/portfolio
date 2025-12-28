@@ -30,6 +30,14 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+body {
+  padding-top: 75px; /* space equal to navbar height */
+}
+nav.navbar {
+  height: 75px;
+  display: flex;
+  align-items: center;
+}
 
 .about-hero {
   height: 400px; /* adjust height */
@@ -267,6 +275,11 @@ nav {
     font-size: 1.8rem;
     line-height: 2.2rem;
   }
+@media (max-width: 768px) {
+  body {
+    padding-top: 90px;
+  }
+}
 
   .profile-img {
     width: 140px;
@@ -588,6 +601,7 @@ section h2 {
       padding: 15px 0;
       color: silver;
     }
+
 
 
 
