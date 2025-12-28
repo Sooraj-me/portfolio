@@ -35,10 +35,11 @@
   </div>
 </nav>
 <section id="home" data-aos="fade-up">
-  <!-- Fullscreen background image -->
-  <img class="bg-image" src="https://i.postimg.cc/WbD93DGw/Whats-App-Image-2025-12-28-at-1-24-24-PM.jpg" alt="Background Image">
-
-  <div class="container text-center">
+  <div class="container">
+    <br><br><br>
+    <img src="https://i.postimg.cc/fTfsp3wq/Linkedin-profile.jpg" 
+         alt="About Me Photo" 
+         class="about-img mb-4">
     <h1 class="display-4 fw-bold">Hi, I'm <span class="gold-text">Sooraj</span></h1>
     <div class="typing" id="typing-text"></div>
 
@@ -48,65 +49,15 @@
       <a href="mailto:soorajshangu@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
 
-    <a href="https://drive.google.com/file/d/10Wt_FDHO0xwAqRL5t9mtFagSeZX4bJAE/view?usp=drivesdk" 
-       target="_blank" 
-       class="btn btn-glow mt-4">
-       📄 View My Resume
-    </a>
+<a href="https://drive.google.com/file/d/10Wt_FDHO0xwAqRL5t9mtFagSeZX4bJAE/view?usp=drivesdk" 
+   target="_blank" 
+   class="btn btn-glow mt-4" 
+   style="border:2px solid gold; background:#2c3e50; color:gold; font-weight:600;">
+   📄 View My Resume
+</a>
+
   </div>
 </section>
-
-<style>
-#home {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* full screen */
-  background-color: #000; /* letterbox color */
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
-
-#home img.bg-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* ensures full image visible */
-  transform: translate(-50%, -50%);
-  z-index: 0;
-}
-
-/* Overlay for readability */
-#home::before {
-  content:'';
-  position:absolute; top:0; left:0; width:100%; height:100%;
-  background: rgba(0,0,0,0.5);
-  z-index:1;
-}
-
-#home .container {
-  position: relative;
-  z-index:2;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .typing { font-size: 1.3rem; }
-  .social-icons a { font-size: 24px; }
-}
-
-@media (max-width: 576px) {
-  .typing { font-size: 1.1rem; }
-  .social-icons a { font-size: 20px; margin: 0 5px; }
-  .btn-glow { font-size: 0.8rem; padding: 0.4rem 0.8rem; }
-}
-</style>
-
 <section id="about" class="py-5 text-center text-white" data-aos="fade-right">
   <div class="container">
     <h2 class="mb-4">About Me</h2>  
@@ -570,13 +521,3 @@ section h2 { color:gold; text-transform:uppercase; text-shadow:0 0 12px rgba(255
 </style>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
