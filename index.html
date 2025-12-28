@@ -18,10 +18,11 @@
     nav a.nav-link { color:silver !important; transition:0.3s; }
     nav a.nav-link:hover, nav a.nav-link.active { color:gold !important; text-shadow:0 0 8px gold; }
 
-    /* Home Section full background */
+    /* Home Section full-size background without crop */
     #home {
-      background: url('https://i.postimg.cc/4N17kPMd/linkedin-profile.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background: url('https://i.postimg.cc/WbD93DGw/Whats-App-Image-2025-12-28-at-1-24-24-PM.jpg') no-repeat center center;
+      background-size: contain; /* contain ensures full image is visible */
+      background-color: #000; /* fallback background */
       height: 100vh;
       display: flex;
       align-items: center;
@@ -31,17 +32,16 @@
       color: white;
     }
 
-    /* Dark overlay for readability */
+    /* Overlay for text readability */
     #home::before {
       content: '';
       position: absolute;
       top:0; left:0;
       width:100%; height:100%;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.5);
       z-index:1;
     }
 
-    /* Container content on top */
     #home .container {
       position: relative;
       z-index:2;
@@ -587,6 +587,7 @@ section h2 { color:gold; text-transform:uppercase; text-shadow:0 0 12px rgba(255
 </style>
 </body>
 </html>
+
 
 
 
