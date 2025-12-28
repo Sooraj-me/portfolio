@@ -24,6 +24,13 @@
   scrollbar-width: thin;
   scrollbar-color: #FFD700 #111;
 }
+body {
+  background-image: url("https://i.postimg.cc/63jnb9Dg/background-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .about-hero {
   height: 400px; /* adjust height */
   background-image: url("https://i.postimg.cc/4N17kPMd/linkedin-profile.jpg");
@@ -539,6 +546,7 @@ section h2 {
       padding: 15px 0;
       color: silver;
     }
+
 
 
 
