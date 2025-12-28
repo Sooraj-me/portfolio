@@ -260,6 +260,33 @@ nav {
   color: #999;
   margin-top: 8px;
 }
+/* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+  
+  h1.display-4 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  .profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .project-card {
+    padding: 15px;
+  }
+
+  .skill-card {
+    justify-content: center;
+    text-align: center;
+  }
+}
 
 @media (max-width: 768px) {
   .timeline {
@@ -322,6 +349,21 @@ section h2 {
   color: #FFD700;
 }
 
+#contactForm button {
+  font-size: 1rem;
+  padding: 10px;
+}
+#typing-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-right: 2px solid gold;
+  padding-right: 5px;
+  animation: cursorBlink 0.7s infinite;
+}
+
+@keyframes cursorBlink {
+  50% { border-color: transparent; }
+}
 
     .skill-card, .project-card, .certificate-card {
       border: 2px solid #FFD700;
@@ -546,6 +588,7 @@ section h2 {
       padding: 15px 0;
       color: silver;
     }
+
 
 
 
