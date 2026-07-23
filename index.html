@@ -1,526 +1,1552 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Sooraj R Nair - Portfolio</title>
 
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
-</head>
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="90" tabindex="0">
+  <style>
 
+    /* =========================================
+       GLOBAL
+    ========================================= */
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding-top: 75px;
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff !important;
+      color: #222222 !important;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    section:nth-child(even) {
+      background: #f7f8fc;
+    }
+
+    section h2 {
+      color: #1c1978 !important;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+    }
+
+    p {
+      color: #555555;
+      line-height: 1.7;
+    }
+
+
+    /* =========================================
+       NAVBAR
+    ========================================= */
+
+    .navbar {
+      height: 75px;
+      background: #ffffff !important;
+      box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08);
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .navbar-brand {
+      color: #1c1978 !important;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .navbar-toggler {
+      border: 1px solid #1c1978;
+    }
+
+    .navbar-toggler i {
+      color: #1c1978;
+    }
+
+    .nav-link {
+      color: #333333 !important;
+      font-weight: 500;
+      margin-left: 10px;
+      transition: 0.3s;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #1c1978 !important;
+    }
+
+
+    /* =========================================
+       HOME
+    ========================================= */
+
+    #home {
+      min-height: calc(100vh - 75px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: #ffffff !important;
+    }
+
+    #home h1 {
+      color: #222222 !important;
+      font-size: 3.5rem;
+    }
+
+    .gold-text {
+      color: #1c1978 !important;
+    }
+
+    .typing {
+      margin-top: 15px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1c1978 !important;
+      min-height: 40px;
+    }
+
+    #typing-text {
+      border-right: 2px solid #1c1978;
+      padding-right: 5px;
+      animation: cursorBlink 0.7s infinite;
+    }
+
+    @keyframes cursorBlink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+
+    /* =========================================
+       SOCIAL ICONS
+    ========================================= */
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .social-icons a {
+      color: #555555;
+      font-size: 28px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #1c1978;
+      transform: translateY(-5px);
+    }
+
+
+    /* =========================================
+       BUTTON
+    ========================================= */
+
+    .btn-glow {
+      background: #1c1978 !important;
+      color: #ffffff !important;
+      border: 2px solid #1c1978 !important;
+      border-radius: 8px;
+      font-weight: 600;
+      padding: 10px 22px;
+      transition: 0.3s;
+    }
+
+    .btn-glow:hover {
+      background: #ffffff !important;
+      color: #1c1978 !important;
+      box-shadow: 0 5px 20px rgba(28, 25, 120, 0.25);
+      transform: translateY(-3px);
+    }
+
+
+    /* =========================================
+       ABOUT
+    ========================================= */
+
+    #about {
+      background: #f7f8fc !important;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #1c1978;
+      margin: 10px auto 30px;
+      display: block;
+      box-shadow: 0 8px 25px rgba(28, 25, 120, 0.2);
+    }
+
+    .about-text {
+      max-width: 850px;
+      margin: auto;
+      font-size: 1.05rem;
+      color: #555555 !important;
+    }
+
+    .about-text strong {
+      color: #1c1978 !important;
+    }
+
+
+    /* =========================================
+       SKILLS
+    ========================================= */
+
+    #skills {
+      background: #ffffff !important;
+    }
+
+    .skill-card {
+      height: 100%;
+      min-height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px;
+      background: #ffffff !important;
+      border: 1px solid #e1e1e1 !important;
+      border-left: 5px solid #1c1978 !important;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+      transition: 0.3s;
+    }
+
+    .skill-card i {
+      color: #1c1978 !important;
+      font-size: 32px;
+    }
+
+    .skill-card h5 {
+      color: #222222 !important;
+      margin: 0;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(28, 25, 120, 0.15);
+      border-color: #1c1978 !important;
+    }
+
+
+    /* =========================================
+       PROJECTS
+    ========================================= */
+
+    #projects {
+      background: #f7f8fc !important;
+    }
+
+    .project-card {
+      height: 100%;
+      background: #ffffff !important;
+      border: 1px solid #e1e1e1 !important;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      border-color: #1c1978 !important;
+      box-shadow: 0 10px 30px rgba(28, 25, 120, 0.15);
+    }
+
+    .project-card h5 {
+      color: #1c1978 !important;
+    }
+
+    .project-card p {
+      color: #555555 !important;
+    }
+
+    .project-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #1c1978;
+    }
+
+
+    /* =========================================
+       EXPERIENCE
+    ========================================= */
+
+    #experience {
+      background: #ffffff !important;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 850px;
+      margin: auto;
+      padding-left: 40px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background: #1c1978;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -38px;
+      top: 25px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #1c1978;
+      border: 4px solid #ffffff;
+      box-shadow: 0 0 0 3px #1c1978;
+    }
+
+    .timeline-card {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      background: #ffffff;
+      border: 1px solid #e1e1e1;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+      transition: 0.3s;
+    }
+
+    .timeline-card:hover {
+      transform: translateY(-5px);
+      border-color: #1c1978;
+      box-shadow: 0 10px 30px rgba(28, 25, 120, 0.15);
+    }
+
+    .timeline-card img {
+      width: 65px;
+      height: 65px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #1c1978;
+    }
+
+    .timeline-content h5 {
+      color: #1c1978 !important;
+      margin-bottom: 8px;
+    }
+
+    .timeline-content p {
+      margin-bottom: 3px;
+      color: #555555 !important;
+    }
+
+    .education-year {
+      color: #1c1978 !important;
+      font-weight: 600;
+    }
+
+
+    /* =========================================
+       CERTIFICATES
+    ========================================= */
+
+    #certificates {
+      background: #f7f8fc !important;
+    }
+
+    .certificate-card {
+      height: 100%;
+      background: #ffffff !important;
+      border: 1px solid #e1e1e1 !important;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+      transition: 0.3s;
+    }
+
+    .certificate-card:hover {
+      transform: translateY(-8px);
+      border-color: #1c1978 !important;
+      box-shadow: 0 10px 30px rgba(28, 25, 120, 0.15);
+    }
+
+    .certificate-card i {
+      color: #1c1978 !important;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .certificate-card h6 {
+      color: #222222 !important;
+    }
+
+    .certificate-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #1c1978;
+    }
+
+    #certificates a {
+      text-decoration: none;
+    }
+
+
+    /* =========================================
+       EDUCATION
+    ========================================= */
+
+    #education {
+      background: #ffffff !important;
+    }
+
+
+    /* =========================================
+       CONTACT
+    ========================================= */
+
+    #hireme {
+      background: #f7f8fc !important;
+    }
+
+    #contactForm {
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .form-control {
+      background: #ffffff !important;
+      color: #222222 !important;
+      border: 1px solid #cccccc !important;
+      padding: 14px;
+      border-radius: 8px;
+    }
+
+    .form-control::placeholder {
+      color: #888888 !important;
+    }
+
+    .form-control:focus {
+      border-color: #1c1978 !important;
+      box-shadow: 0 0 8px rgba(28, 25, 120, 0.2) !important;
+    }
+
+
+    /* =========================================
+       CONNECT
+    ========================================= */
+
+    .connect-section {
+      background: #ffffff;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    .connect-section h6 {
+      color: #1c1978 !important;
+      font-weight: 700;
+    }
+
+    .connect-section a {
+      color: #555555 !important;
+      font-size: 28px;
+      margin: 0 12px;
+      transition: 0.3s;
+    }
+
+    .connect-section a:hover {
+      color: #1c1978 !important;
+    }
+
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+
+    footer {
+      background: #1c1978 !important;
+      color: #ffffff !important;
+      text-align: center;
+    }
+
+    footer p {
+      color: #ffffff !important;
+      margin: 0;
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 768px) {
+
+      body {
+        padding-top: 70px;
+      }
+
+      .navbar {
+        height: 70px;
+      }
+
+      #home h1 {
+        font-size: 2rem;
+      }
+
+      .typing {
+        font-size: 1.2rem;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      section h2 {
+        font-size: 1.7rem;
+      }
+
+      .skill-card {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .timeline {
+        padding-left: 30px;
+      }
+
+      .timeline-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .timeline-card img {
+        margin: auto;
+      }
+
+      .timeline-dot {
+        left: -28px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
 
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <a class="navbar-brand fw-bold gold-text" href="#home"><h6 style="color: #1C1978;">Sooraj</h6></a>
-    <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="fas fa-bars"></span>
+
+    <a class="navbar-brand" href="#home">
+      Sooraj
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <i class="fas fa-bars"></i>
+
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
+
       <ul class="navbar-nav ms-auto text-center">
-        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-        <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
-        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-        <li class="nav-item"><a class="nav-link" href="#hireme">Contact Me</a></li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#home">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#experience">Experience</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#certificates">Certificates</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#education">Education</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#hireme">Contact Me</a>
+        </li>
+
       </ul>
+
     </div>
   </div>
 </nav>
-<section id="home" data-aos="fade-up">
-  <div class="container">
-    <br><br><br>
-   
-    <h1 class="display-4 fw-bold">Hi, I'm <span class="gold-text">Sooraj</span></h1>
-    <div class="typing" id="typing-text"></div>
 
-    <div class="social-icons mt-3">
-      <a href="https://www.linkedin.com/in/sooraj-r-nair-38757925a" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/sooraj-me" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="mailto:soorajshangu@gmail.com"><i class="fas fa-envelope"></i></a>
+
+<!-- =========================================
+     HOME
+========================================= -->
+
+<section id="home">
+
+  <div class="container">
+
+    <h1>
+      Hi, I'm
+      <span class="gold-text">Sooraj</span>
+    </h1>
+
+    <div class="typing">
+      <span id="typing-text"></span>
     </div>
 
-<a href="https://drive.google.com/file/d/10Wt_FDHO0xwAqRL5t9mtFagSeZX4bJAE/view?usp=drivesdk" 
-   target="_blank" 
-   class="btn btn-glow mt-4" 
-   style="border:2px solid gold; background:#2c3e50; color:gold; font-weight:600;">
-   📄 View My Resume
-</a>
+    <div class="social-icons">
+
+      <a
+        href="https://www.linkedin.com/in/sooraj-r-nair-38757925a"
+        target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+
+      <a
+        href="https://github.com/sooraj-me"
+        target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <a href="mailto:soorajshangu@gmail.com">
+        <i class="fas fa-envelope"></i>
+      </a>
+
+    </div>
+
+    <a
+      href="https://drive.google.com/file/d/10Wt_FDHO0xwAqRL5t9mtFagSeZX4bJAE/view?usp=drivesdk"
+      target="_blank"
+      class="btn btn-glow mt-4">
+
+      <i class="fas fa-file-pdf"></i>
+      View My Resume
+
+    </a>
 
   </div>
-</section>
-<section id="about" class="py-5 text-center text-white" data-aos="fade-right">
-  <div class="container">
-    <h2 class="mb-4">About Me</h2>  
-    <img src="https://i.postimg.cc/43FCz4z0/IMG-20250925-071719.jpg" 
-         alt="Profile" class="profile-img">
 
-    <p class="about-text mx-auto">
-      Hello!, I’m <strong class="text-info">Sooraj R Nair</strong>, a passionate 
-      <span class="text-warning">Full Stack Developer</span> with expertise in 
-      <span class="text-success">Python</span>, <span class="text-primary">Artificial Intelligence</span>, 
-      and a strong foundation in <span class="text-danger">Data Structures and Algorithms (DSA)</span>.
-      I love building interactive, user-friendly applications and solving real-world problems through code.  
-      Always eager to learn, I explore new technologies and aim to deliver high-quality, scalable solutions.
+</section>
+
+
+<!-- =========================================
+     ABOUT
+========================================= -->
+
+<section id="about" data-aos="fade-up">
+
+  <div class="container text-center">
+
+    <h2>About Me</h2>
+
+    <img
+      src="https://i.postimg.cc/43FCz4z0/IMG-20250925-071719.jpg"
+      alt="Sooraj R Nair"
+      class="profile-img">
+
+    <p class="about-text">
+
+      Hello! I'm
+      <strong>Sooraj R Nair</strong>,
+      a passionate
+      <strong>Software Engineer</strong>
+      with expertise in
+      <strong>Python</strong>,
+      <strong>Artificial Intelligence</strong>,
+      automation, and
+      <strong>Data Structures and Algorithms</strong>.
+
+      I love building interactive, user-friendly applications
+      and solving real-world problems through technology.
+
+      Always eager to learn, I explore new technologies
+      and aim to deliver high-quality and scalable solutions.
+
     </p>
+
   </div>
+
 </section>
 
 
+<!-- =========================================
+     SKILLS
+========================================= -->
 
-<section id="skills" class="py-5 text-center">
-  <div class="container">
-    <h2 class="mb-4"><strong>Skills</strong></h2>
+<section id="skills">
+
+  <div class="container text-center">
+
+    <h2>Skills</h2>
+
     <div class="row g-4 justify-content-center">
 
-      <div class="col-6">
-        <div class="skill-card d-flex align-items-center justify-content-start p-3">
-          <i class="fab fa-html5 me-3 text-danger" style="font-size: 32px;"></i>
-          <h5 class="mb-0">HTML</h5>
+
+      <div class="col-6 col-md-3">
+        <div class="skill-card">
+          <i class="fab fa-html5 me-3"></i>
+          <h5>HTML</h5>
         </div>
       </div>
 
-      <div class="col-6">
-        <div class="skill-card d-flex align-items-center justify-content-start p-3">
-          <i class="fab fa-css3-alt me-3 text-primary" style="font-size: 32px;"></i>
-          <h5 class="mb-0">CSS</h5>
+
+      <div class="col-6 col-md-3">
+        <div class="skill-card">
+          <i class="fab fa-css3-alt me-3"></i>
+          <h5>CSS</h5>
         </div>
       </div>
 
-      <div class="col-6">
-        <div class="skill-card d-flex align-items-center justify-content-start p-3">
-          <i class="fab fa-bootstrap me-3" style="font-size: 32px; color: #7952b3;"></i>
-          <h5 class="mb-0">Bootstrap</h5>
+
+      <div class="col-6 col-md-3">
+        <div class="skill-card">
+          <i class="fab fa-bootstrap me-3"></i>
+          <h5>Bootstrap</h5>
         </div>
       </div>
 
-      <div class="col-6">
-        <div class="skill-card d-flex align-items-center justify-content-start p-3">
-          <i class="fab fa-js me-3 text-warning" style="font-size: 32px;"></i>
-          <h5 class="mb-0">JavaScript</h5>
+
+      <div class="col-6 col-md-3">
+        <div class="skill-card">
+          <i class="fab fa-js me-3"></i>
+          <h5>JavaScript</h5>
         </div>
       </div>
 
-      <div class="col-6">
-        <div class="skill-card d-flex align-items-center justify-content-start p-3">
-          <i class="fab fa-python me-3 text-info" style="font-size: 32px;"></i>
-          <h5 class="mb-0">Python</h5>
+
+      <div class="col-6 col-md-3">
+        <div class="skill-card">
+          <i class="fab fa-python me-3"></i>
+          <h5>Python</h5>
         </div>
       </div>
 
-      <div class="col-6">
-        <div class="skill-card d-flex align-items-center justify-content-start p-3">
-          <i class="fas fa-code me-3 text-secondary" style="font-size: 32px;"></i>
-          <h5 class="mb-0">DSA</h5>
+
+      <div class="col-6 col-md-3">
+        <div class="skill-card">
+          <i class="fas fa-code me-3"></i>
+          <h5>DSA</h5>
         </div>
       </div>
 
-      <div class="col-6">
-        <div class="skill-card d-flex align-items-center justify-content-start p-3">
-          <img src="https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg"
-               alt="MySQL Logo" class="me-3" style="width: 32px; height: 32px; object-fit: contain;">
-          <h5 class="mb-0">MySQL</h5>
+
+      <div class="col-6 col-md-3">
+        <div class="skill-card">
+
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg"
+            alt="MySQL"
+            style="width:32px;height:32px;"
+            class="me-3">
+
+          <h5>MySQL</h5>
+
         </div>
       </div>
 
-      <div class="col-6">
-        <div class="skill-card d-flex align-items-center justify-content-start p-3">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg"
-               alt="Power BI Logo" class="me-3" style="width: 32px; height: 32px; object-fit: contain;">
-          <h5 class="mb-0">Power BI</h5>
+
+      <div class="col-6 col-md-3">
+        <div class="skill-card">
+
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg"
+            alt="Power BI"
+            style="width:32px;height:32px;"
+            class="me-3">
+
+          <h5>Power BI</h5>
+
         </div>
       </div>
+
 
     </div>
+
   </div>
+
 </section>
 
 
+<!-- =========================================
+     PROJECTS
+========================================= -->
 
-<section id="projects" class="py-5" data-aos="fade-up">
+<section id="projects">
+
   <div class="container text-center">
-    <h2><strong>Projects</strong></h2>
+
+    <h2>Projects</h2>
+
     <div class="row g-4">
-          <div class="col-md-6">
-        <div class="project-card p-4">
-          <img src="https://i.postimg.cc/zXSBhwJr/Whats-App-Image-2025-09-03-at-21-18-27-95b120b0.jpg" 
-               class="img-fluid project-img rounded mb-3">
-          <h5><strong>Find Movies App</strong></h5>
-          <p>A web application that allows users to search and explore movies by title, genre, or popularity. Integrated with the TMDb API to fetch real-time movie data including posters, ratings, release year, and descriptions</p>
-          <a href="https://find-movies-app-sooraj.vercel.app/" target="_blank" class="btn btn-glow btn-sm">Live Demo</a>
+
+
+      <div class="col-md-6">
+
+        <div class="project-card">
+
+          <img
+            src="https://i.postimg.cc/zXSBhwJr/Whats-App-Image-2025-09-03-at-21-18-27-95b120b0.jpg"
+            class="project-img mb-3"
+            alt="Find Movies App">
+
+          <h5>Find Movies App</h5>
+
+          <p>
+            A web application that allows users to search and explore
+            movies by title, genre, or popularity. Integrated with
+            the TMDb API to fetch real-time movie data including
+            posters, ratings, release year, and descriptions.
+          </p>
+
+          <a
+            href="https://find-movies-app-sooraj.vercel.app/"
+            target="_blank"
+            class="btn btn-glow btn-sm">
+
+            Live Demo
+
+          </a>
+
         </div>
+
       </div>
-      
-         <div class="col-md-6">
-        <div class="project-card p-4">
-          <img src="https://i.postimg.cc/6QPFqPgp/file.jpg" 
-               class="img-fluid project-img rounded mb-3">
-          <h5><strong>File Sharing Application</strong></h5>
-          <p>Cloud-Based File Sharing Application
-Built using the MERN stack, this app makes file sharing seamless: Upload any file Instantly generate a unique download link Share with anyone – no login required!!! Quick & hassle-free downloads</p>
-          <a href="https://filesharingapplication-9nss.onrender.com/" target="_blank" class="btn btn-glow btn-sm">Live Demo</a>
+
+
+      <div class="col-md-6">
+
+        <div class="project-card">
+
+          <img
+            src="https://i.postimg.cc/6QPFqPgp/file.jpg"
+            class="project-img mb-3"
+            alt="File Sharing Application">
+
+          <h5>File Sharing Application</h5>
+
+          <p>
+            A cloud-based file sharing application built using
+            the MERN stack. Users can upload files, generate
+            unique download links, and share files without login.
+          </p>
+
+          <a
+            href="https://filesharingapplication-9nss.onrender.com/"
+            target="_blank"
+            class="btn btn-glow btn-sm">
+
+            Live Demo
+
+          </a>
+
         </div>
+
       </div>
-<div class="col-md-6">
-  <div class="project-card p-4">
-    <img src="https://i.postimg.cc/Qd9BZpNh/ai-chatbot-chat-ai-screenshot.avif" 
-         class="img-fluid project-img rounded mb-3" alt="RAG Chatbot Project">
-    <h5><strong>Personal Chatbot using RAG</strong></h5>
-    <p>AI-powered chatbot that leverages Retrieval-Augmented Generation (RAG) to provide context-aware answers from personal data and documents.</p>
-    <span class="badge bg-warning text-dark">⏳ Ongoing</span>
-    <br><br>
-    <a href="#" class="btn btn-secondary btn-sm disabled">Demo Coming Soon</a>
-  </div>
-</div>
+
+
+      <div class="col-md-6">
+
+        <div class="project-card">
+
+          <img
+            src="https://i.postimg.cc/Qd9BZpNh/ai-chatbot-chat-ai-screenshot.avif"
+            class="project-img mb-3"
+            alt="RAG Chatbot">
+
+          <h5>Personal Chatbot using RAG</h5>
+
+          <p>
+            AI-powered chatbot that uses Retrieval-Augmented
+            Generation to provide context-aware answers from
+            personal data and documents.
+          </p>
+
+          <span class="badge bg-warning text-dark">
+            Ongoing
+          </span>
+
+          <br><br>
+
+          <button class="btn btn-secondary btn-sm" disabled>
+            Demo Coming Soon
+          </button>
+
+        </div>
+
+      </div>
+
+
     </div>
+
   </div>
+
 </section>
 
-<section id="experience" class="experience-section py-5" data-aos="fade-up">
+
+<!-- =========================================
+     EXPERIENCE
+========================================= -->
+
+<section id="experience">
+
   <div class="container">
-    <h2 class="text-center mb-5"><strong>Experience</strong></h2>
+
+    <h2 class="text-center">
+      Experience
+    </h2>
 
     <div class="timeline">
-      <div class="timeline-item" data-aos="fade-right">
+
+
+      <div class="timeline-item">
+
         <div class="timeline-dot"></div>
+
         <div class="timeline-card">
-          <img src="https://i.postimg.cc/XvkNCvWv/2fb2.webp" alt="GeoSensing Logo">
+
+          <img
+            src="https://i.postimg.cc/XvkNCvWv/2fb2.webp"
+            alt="GeoSensing Logo">
+
           <div class="timeline-content">
-            <h5><strong>Deep Learning Intern</strong></h5>
-            <p class="mb-1">GeoSensing & Imaging Consultancy</p>
-            <p class="mb-1">Trivandrum, Kerala</p>
-            <span class="education-year">October 2025 – Present</span>
+
+            <h5>Deep Learning Intern</h5>
+
+            <p>GeoSensing & Imaging Consultancy</p>
+
+            <p>Trivandrum, Kerala</p>
+
+            <span class="education-year">
+              October 2025 – Present
+            </span>
+
           </div>
+
         </div>
+
       </div>
 
-      <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+
+      <div class="timeline-item">
+
         <div class="timeline-dot"></div>
+
         <div class="timeline-card">
-          <img src="https://i.postimg.cc/YCd0n3jp/images.jpg" alt="CopterCode Logo">
+
+          <img
+            src="https://i.postimg.cc/YCd0n3jp/images.jpg"
+            alt="CopterCode Logo">
+
           <div class="timeline-content">
-            <h5><strong>Software Developer Intern</strong></h5>
-            <p class="mb-1">CopterCode, IIT Madras Research Park</p>
-            <p class="mb-1">Chennai, Tamil Nadu</p>
-            <span class="education-year">July 2025 – August 2025</span>
+
+            <h5>Software Developer Intern</h5>
+
+            <p>CopterCode, IIT Madras Research Park</p>
+
+            <p>Chennai, Tamil Nadu</p>
+
+            <span class="education-year">
+              July 2025 – August 2025
+            </span>
+
           </div>
+
         </div>
+
       </div>
 
-      <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+
+      <div class="timeline-item">
+
         <div class="timeline-dot"></div>
+
         <div class="timeline-card">
-          <img src="https://i.postimg.cc/Hx2hXVB3/1633671283385.jpg" alt="Live Stream Technologies Logo">
+
+          <img
+            src="https://i.postimg.cc/Hx2hXVB3/1633671283385.jpg"
+            alt="Live Stream Technologies Logo">
+
           <div class="timeline-content">
-            <h5><strong>Data Analyst Intern</strong></h5>
-            <p class="mb-1">Live Stream Technologies</p>
-            <p class="mb-1">Coimbatore, Tamil Nadu</p>
-            <span class="education-year">June 2024 – July 2024</span>
+
+            <h5>Data Analyst Intern</h5>
+
+            <p>Live Stream Technologies</p>
+
+            <p>Coimbatore, Tamil Nadu</p>
+
+            <span class="education-year">
+              June 2024 – July 2024
+            </span>
+
           </div>
+
         </div>
+
       </div>
+
 
     </div>
+
   </div>
+
 </section>
 
 
+<!-- =========================================
+     CERTIFICATES
+========================================= -->
 
-<section id="certificates" class="py-5">
+<section id="certificates">
+
   <div class="container text-center">
-    <h2 data-aos="fade-up"><strong>Certificates</strong></h2>
+
+    <h2>Certificates</h2>
+
     <div class="row g-4">
 
 
+      <div class="col-md-6 col-lg-3">
 
-      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
-        <a href="https://www.udemy.com/certificate/UC-344558b7-62c7-4b78-9bd2-a5baa07ef0ac/" target="_blank">
-          <div class="certificate-card p-4">
-            <img src="https://i.postimg.cc/htY62wsR/python.jpg" alt="Python Certificate"
-                 class="img-fluid rounded mb-3 certificate-img">
+        <a
+          href="https://www.udemy.com/certificate/UC-344558b7-62c7-4b78-9bd2-a5baa07ef0ac/"
+          target="_blank">
+
+          <div class="certificate-card">
+
+            <img
+              src="https://i.postimg.cc/htY62wsR/python.jpg"
+              class="certificate-img mb-3"
+              alt="Python Certificate">
+
             <i class="fab fa-python"></i>
-            <h6>Python Bootcamp Udemy Certificate</h6>
+
+            <h6>
+              Python Bootcamp Udemy Certificate
+            </h6>
+
           </div>
+
         </a>
+
       </div>
 
-      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
-        <a href="https://coursera.org/share/23f1d217de16098a62e275f6eee59a27" target="_blank">
-          <div class="certificate-card p-4">
-            <img src="https://i.postimg.cc/Wbg2jXLN/Screenshot-2025-09-14-212408.png" 
-     alt="Software Engineering Certificate"
-     class="img-fluid rounded mb-3 certificate-img">
+
+      <div class="col-md-6 col-lg-3">
+
+        <a
+          href="https://coursera.org/share/23f1d217de16098a62e275f6eee59a27"
+          target="_blank">
+
+          <div class="certificate-card">
+
+            <img
+              src="https://i.postimg.cc/Wbg2jXLN/Screenshot-2025-09-14-212408.png"
+              class="certificate-img mb-3"
+              alt="Software Engineering Certificate">
+
             <i class="fas fa-laptop-code"></i>
-            <h6>IBM Software Engineering Certificate</h6>
+
+            <h6>
+              IBM Software Engineering Certificate
+            </h6>
+
           </div>
+
         </a>
+
       </div>
-      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
-        <a href="https://trainings.internshala.com/view_certificate/1d3q1sbhatk/2mgmvva66zq" target="_blank">
-          <div class="certificate-card p-4">
-            <img src="https://i.postimg.cc/XNh57ks7/machine-learning.png" alt="Machine Learning"
-                 class="img-fluid rounded mb-3 certificate-img">
+
+
+      <div class="col-md-6 col-lg-3">
+
+        <a
+          href="https://trainings.internshala.com/view_certificate/1d3q1sbhatk/2mgmvva66zq"
+          target="_blank">
+
+          <div class="certificate-card">
+
+            <img
+              src="https://i.postimg.cc/XNh57ks7/machine-learning.png"
+              class="certificate-img mb-3"
+              alt="Machine Learning Certificate">
+
             <i class="fas fa-robot"></i>
-            <h6>Internshala Machine Learning certificate</h6>
+
+            <h6>
+              Internshala Machine Learning Certificate
+            </h6>
+
           </div>
+
         </a>
+
       </div>
-<div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
-  <a href="https://archive.nptel.ac.in/content/noc/NOC25/SEM1/Ecertificates/106/noc25-cs44/Course/NPTEL25CS44S34360204704373703.pdf" target="_blank">
-    <div class="certificate-card p-4">
-      <img src="https://i.postimg.cc/c6yTWsqc/Screenshot-2025-09-14-213417.png" 
-           alt="NPTEL Certificate"
-           class="img-fluid rounded mb-3 certificate-img">
-      <i class="fas fa-certificate"></i>
-      <h6>Internet of Things NPTEL Certificate</h6>
+
+
+      <div class="col-md-6 col-lg-3">
+
+        <a
+          href="https://archive.nptel.ac.in/content/noc/NOC25/SEM1/Ecertificates/106/noc25-cs44/Course/NPTEL25CS44S34360204704373703.pdf"
+          target="_blank">
+
+          <div class="certificate-card">
+
+            <img
+              src="https://i.postimg.cc/c6yTWsqc/Screenshot-2025-09-14-213417.png"
+              class="certificate-img mb-3"
+              alt="NPTEL Certificate">
+
+            <i class="fas fa-certificate"></i>
+
+            <h6>
+              Internet of Things NPTEL Certificate
+            </h6>
+
+          </div>
+
+        </a>
+
+      </div>
+
+
     </div>
-  </a>
-</div>
-    </div>
+
   </div>
+
 </section>
 
 
-<section id="education" class="education-section py-5" data-aos="fade-up">
+<!-- =========================================
+     EDUCATION
+========================================= -->
+
+<section id="education">
+
   <div class="container">
-    <h2 class="text-center mb-5"><strong>Education</strong></h2>
+
+    <h2 class="text-center">
+      Education
+    </h2>
 
     <div class="timeline">
 
-      <div class="timeline-item left" data-aos="fade-right">
+
+      <div class="timeline-item">
+
         <div class="timeline-dot"></div>
+
         <div class="timeline-card">
-          <div class="icon-box"><i class="fas fa-graduation-cap"></i></div>
-          <div class="timeline-content">
-            <h5><strong>Bachelor of Computer Science and Engineering</strong></h5>
-            <p class="mb-1">Sri Ramakrishna Institute of Technology</p>
-            <p class="mb-1">Coimbatore, Tamil Nadu</p>
-            <span class="education-year">2022 – 2026</span>
+
+          <div class="icon-box">
+            <i
+              class="fas fa-graduation-cap"
+              style="font-size:35px;color:#1c1978;">
+            </i>
           </div>
+
+          <div class="timeline-content">
+
+            <h5>
+              Bachelor of Computer Science and Engineering
+            </h5>
+
+            <p>
+              Sri Ramakrishna Institute of Technology
+            </p>
+
+            <p>
+              Coimbatore, Tamil Nadu
+            </p>
+
+            <span class="education-year">
+              2022 – 2026
+            </span>
+
+          </div>
+
         </div>
+
       </div>
 
-      <div class="timeline-item right" data-aos="fade-left" data-aos-delay="100">
+
+      <div class="timeline-item">
+
         <div class="timeline-dot"></div>
+
         <div class="timeline-card">
-          <div class="icon-box"><i class="fas fa-school"></i></div>
-          <div class="timeline-content">
-            <h5><strong>Higher Secondary Education</strong></h5>
-            <p class="mb-1">Vasavi Vidyalaya Matriculation Higher Secondary School</p>
-            <p class="mb-1">Tamil Nadu</p>
-            <span class="education-year">2020 – 2022</span>
+
+          <div class="icon-box">
+            <i
+              class="fas fa-school"
+              style="font-size:35px;color:#1c1978;">
+            </i>
           </div>
+
+          <div class="timeline-content">
+
+            <h5>
+              Higher Secondary Education
+            </h5>
+
+            <p>
+              Vasavi Vidyalaya Matriculation Higher Secondary School
+            </p>
+
+            <p>
+              Tamil Nadu
+            </p>
+
+            <span class="education-year">
+              2020 – 2022
+            </span>
+
+          </div>
+
         </div>
+
       </div>
 
-      <div class="timeline-item left" data-aos="fade-right" data-aos-delay="200">
+
+      <div class="timeline-item">
+
         <div class="timeline-dot"></div>
+
         <div class="timeline-card">
-          <div class="icon-box"><i class="fas fa-book-open"></i></div>
-          <div class="timeline-content">
-            <h5><strong>Secondary School Education</strong></h5>
-            <p class="mb-1">Vasavi Vidyalaya Matriculation Higher Secondary School</p>
-            <p class="mb-1">Tamil Nadu</p>
-            <span class="education-year">2020</span>
+
+          <div class="icon-box">
+            <i
+              class="fas fa-book-open"
+              style="font-size:35px;color:#1c1978;">
+            </i>
           </div>
+
+          <div class="timeline-content">
+
+            <h5>
+              Secondary School Education
+            </h5>
+
+            <p>
+              Vasavi Vidyalaya Matriculation Higher Secondary School
+            </p>
+
+            <p>
+              Tamil Nadu
+            </p>
+
+            <span class="education-year">
+              2020
+            </span>
+
+          </div>
+
         </div>
+
       </div>
+
 
     </div>
+
   </div>
+
 </section>
 
 
-<section id="hireme" class="py-5" style="background: transparent;">
-  <div class="container text-center">
-    <h2><strong>Contact Me</strong></h2>
-    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" 
-          style="max-width: 750px; background: transparent; border: none; margin: 0 auto; padding: 0;">
+<!-- =========================================
+     CONTACT
+========================================= -->
 
-      <input type="hidden" name="access_key" value="204601a3-2ed4-42b8-96f6-cb8f763605d2">
+<section id="hireme">
+
+  <div class="container text-center">
+
+    <h2>Contact Me</h2>
+
+    <form
+      id="contactForm"
+      action="https://api.web3forms.com/submit"
+      method="POST">
+
+      <input
+        type="hidden"
+        name="access_key"
+        value="204601a3-2ed4-42b8-96f6-cb8f763605d2">
 
       <div class="row g-3">
+
         <div class="col-md-6">
-          <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            placeholder="Your Name"
+            required>
+
         </div>
+
         <div class="col-md-6">
-          <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            placeholder="Your Email"
+            required>
+
         </div>
+
         <div class="col-12">
-          <textarea name="message" rows="5" class="form-control" placeholder="Message" required></textarea>
+
+          <textarea
+            name="message"
+            rows="5"
+            class="form-control"
+            placeholder="Message"
+            required>
+          </textarea>
+
         </div>
+
       </div>
 
-      <button class="btn btn-glow w-100 mt-3"> 🚀 Send</button>
-      
+      <button class="btn btn-glow w-100 mt-3">
+        <i class="fas fa-paper-plane"></i>
+        Send Message
+      </button>
+
     </form>
+
   </div>
+
 </section>
-  <script>
-  document.addEventListener("scroll", function () {
-    const timeline = document.querySelector(".timeline");
-    const rect = timeline.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-
-    if (rect.top < windowHeight * 0.8) {
-      timeline.classList.add("active");
-    } else {
-      timeline.classList.remove("active");
-    }
-  });
-</script>
 
 
+<!-- =========================================
+     CONNECT
+========================================= -->
 
-<script>
-  document.getElementById("contactForm").addEventListener("submit", function (e) {
-    e.preventDefault(); 
-    const form = this;
+<section class="connect-section">
 
-    fetch(form.action, {
-      method: form.method,
-      body: new FormData(form),
-    }).then(response => {
-      if (response.ok) {
-        confirm("✅ Message sent successfully!");
-        form.reset(); 
-      } else {
-        alert("❌ Something went wrong. Please try again.");
-      }
-    }).catch(() => {
-      alert("⚠️ Network error. Please try later.");
-    });
-  });
-</script>
-
-<br><section class="text-center">
   <div class="container">
-    <h6 style="color: ghostwhite;">Connect with Me</h6>
-    <div style="display: flex; justify-content: center; gap: 25px; margin-top: 20px;">
-      <a href="https://www.linkedin.com/in/sooraj-r-nair-38757925a" target="_blank" 
-         style="color: silver; font-size: 28px; text-decoration: none;">
-         <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/sooraj-me" target="_blank" 
-         style="color: silver; font-size: 28px; text-decoration: none;">
-         <i class="fab fa-github"></i>
-      </a>
-      <a href="mailto:soorajshangu@gmail.com" 
-         style="color: silver; font-size: 28px; text-decoration: none;">
-         <i class="fas fa-envelope"></i>
-      </a>
-    </div>
-  </div>
-</section>
-<br>
 
-<footer class="text-light text-center py-3">
-  <p class="silver-text">Made with <span class="text-danger">❤</span> by Sooraj</p>
+    <h6>
+      Connect with Me
+    </h6>
+
+    <div>
+
+      <a
+        href="https://www.linkedin.com/in/sooraj-r-nair-38757925a"
+        target="_blank">
+
+        <i class="fab fa-linkedin"></i>
+
+      </a>
+
+      <a
+        href="https://github.com/sooraj-me"
+        target="_blank">
+
+        <i class="fab fa-github"></i>
+
+      </a>
+
+      <a href="mailto:soorajshangu@gmail.com">
+
+        <i class="fas fa-envelope"></i>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="py-3">
+
+  <p>
+    Made with
+    <span>❤</span>
+    by Sooraj
+  </p>
+
 </footer>
 
+
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 1000, once: true });
-</script>
 
 <script>
-  const texts = ["Full Stack Developer", "Python Programmer", "AI Enthusiast"];
-  let count = 0, index = 0, currentText = "", letter = "";
-  function type() {
-    if (count === texts.length) count = 0;
-    currentText = texts[count];
-    letter = currentText.slice(0, ++index);
-    document.getElementById("typing-text").textContent = letter;
-    if (letter.length === currentText.length) { count++; index = 0; setTimeout(type, 1500);}
-    else { setTimeout(type, 100); }
-  }
-  type();
-</script>
 
-<script>
-  document.addEventListener("mousemove", e => {
-    let glow = document.createElement("div");
-    glow.className = "cursor-glow";
-    glow.style.left = e.pageX + "px";
-    glow.style.top = e.pageY + "px";
-    document.body.appendChild(glow);
-    setTimeout(() => glow.remove(), 500);
+  AOS.init({
+    duration: 1000,
+    once: true
   });
+
+
+  /* =========================================
+     TYPING ANIMATION
+  ========================================= */
+
+  const texts = [
+    "Software Engineer",
+    "Python Programmer",
+    "AI Enthusiast",
+    "Automation Developer"
+  ];
+
+  let count = 0;
+  let index = 0;
+  let currentText = "";
+  let letter = "";
+
+  function type() {
+
+    if (count === texts.length) {
+      count = 0;
+    }
+
+    currentText = texts[count];
+
+    letter = currentText.slice(0, ++index);
+
+    document.getElementById("typing-text").textContent = letter;
+
+    if (letter.length === currentText.length) {
+
+      count++;
+      index = 0;
+
+      setTimeout(type, 1500);
+
+    } else {
+
+      setTimeout(type, 100);
+
+    }
+
+  }
+
+  type();
+
+
+  /* =========================================
+     CONTACT FORM
+  ========================================= */
+
+  document
+    .getElementById("contactForm")
+    .addEventListener("submit", function(e) {
+
+      e.preventDefault();
+
+      const form = this;
+
+      fetch(form.action, {
+        method: form.method,
+        body: new FormData(form)
+      })
+
+      .then(response => {
+
+        if (response.ok) {
+
+          alert("Message sent successfully!");
+
+          form.reset();
+
+        } else {
+
+          alert("Something went wrong. Please try again.");
+
+        }
+
+      })
+
+      .catch(() => {
+
+        alert("Network error. Please try later.");
+
+      });
+
+    });
+
+
 </script>
 
-<style>
-nav {
-  background:#111 !important;
-  box-shadow:0 2px 15px rgba(255,215,0,0.3);
-}
-.navbar-brand { color:gold; font-size:1.3rem; }
-.navbar-toggler { border:none; }
-.navbar-toggler span { color:gold; font-size:1.5rem; }
-nav a.nav-link { color:silver !important; transition:0.3s; }
-nav a.nav-link:hover, nav a.nav-link.active { color:gold !important; text-shadow:0 0 8px gold; }
 
-.cursor-glow {
-  position:absolute;
-  width:20px; height:20px;
-  border-radius:50%;
-  background:radial-gradient(circle, gold, transparent);
-  pointer-events:none;
-  transform:translate(-50%, -50%);
-  animation:fadeOut 0.5s forwards;
-}
-@keyframes fadeOut { to { opacity:0; transform:translate(-50%,-50%) scale(2);} }
-
-.skill-card, .project-card, .certificate-card {
-  border:2px solid gold;
-  border-radius:12px;
-  background:#111;
-  transition:.3s;
-  text-align:center;
-}
-.skill-card:hover, .project-card:hover, .certificate-card:hover {
-  transform:translateY(-8px);
-  box-shadow:0 0 20px gold;
-  color:gold;
-}
-.skill-card i { font-size:40px; color:gold; }
-.project-img { max-height:220px; object-fit:cover; border:2px solid gold; }
-
-body { font-family:'Poppins',sans-serif; background:#000; color:#f5f5f5; scroll-behavior:smooth; }
-section h2 { color:gold; text-transform:uppercase; text-shadow:0 0 12px rgba(255,215,0,.6); }
-.profile-img { width:160px; height:160px; border-radius:50%; border:3px solid gold; margin:20px auto; display:block; }
-.typing { font-size:1.5rem; font-weight:600; color:gold; }
-.gold-text { background:linear-gradient(90deg,#FFD700,#FFA500); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
-.silver-text { background:linear-gradient(90deg,#C0C0C0,#E0E0E0); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-
-.social-icons {
-  display: flex;
-  justify-content: center;   
-  gap: 25px;                 
-}
-
-.social-icons a {
-  color: silver;
-  font-size: 28px;
-  transition: transform 0.3s, color 0.3s;
-}
-
-.social-icons a:hover {
-  transform: scale(1.2);
-  color: #FFA500;  
-}
-</style>
 </body>
+
 </html>
-
-
-
+```
