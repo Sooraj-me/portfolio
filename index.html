@@ -3,22 +3,32 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Sooraj R Nair - Portfolio</title>
+  <title>Sooraj R Nair | Software Engineer</title>
 
   <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
 
   <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    rel="stylesheet">
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link
+    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+    rel="stylesheet">
+
 
   <style>
 
@@ -115,6 +125,7 @@
     #home h1 {
       color: #222222 !important;
       font-size: 3.5rem;
+      font-weight: 700;
     }
 
     .gold-text {
@@ -136,9 +147,11 @@
     }
 
     @keyframes cursorBlink {
+
       50% {
         border-color: transparent;
       }
+
     }
 
 
@@ -166,7 +179,7 @@
 
 
     /* =========================================
-       BUTTON
+       BUTTONS
     ========================================= */
 
     .btn-glow {
@@ -229,33 +242,136 @@
 
     .skill-card {
       height: 100%;
-      min-height: 100px;
+      min-height: 110px;
+
       display: flex;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
+
       padding: 20px;
+
       background: #ffffff !important;
+
       border: 1px solid #e1e1e1 !important;
       border-left: 5px solid #1c1978 !important;
+
       border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+      box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+
       transition: 0.3s;
     }
 
-    .skill-card i {
-      color: #1c1978 !important;
-      font-size: 32px;
+    .skill-card:hover {
+      transform: translateY(-8px);
+
+      border-color: #1c1978 !important;
+
+      box-shadow:
+        0 10px 30px rgba(28, 25, 120, 0.15);
     }
 
     .skill-card h5 {
       color: #222222 !important;
       margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
     }
 
-    .skill-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 30px rgba(28, 25, 120, 0.15);
-      border-color: #1c1978 !important;
+    .skill-card:hover h5 {
+      color: #1c1978 !important;
+    }
+
+    /* Python Icon */
+
+    .skill-card i.fa-python {
+      color: #3776AB !important;
+      font-size: 42px;
+      margin-right: 15px;
+    }
+
+    /* AI Icon */
+
+    .skill-icon {
+      color: #1c1978 !important;
+      font-size: 38px;
+      margin-right: 15px;
+    }
+
+    /* Adobe Logo */
+
+    .skill-logo {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      margin-right: 15px;
+    }
+
+    /* Workfront Text Logo */
+
+    .workfront-logo {
+      width: 48px;
+      height: 48px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #eb1000;
+      color: #ffffff;
+
+      border-radius: 8px;
+
+      font-size: 25px;
+      font-weight: 700;
+
+      margin-right: 15px;
+    }
+
+    /* Fusion Logo */
+
+    .fusion-logo {
+      width: 48px;
+      height: 48px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #1c1978;
+      color: #ffffff;
+
+      border-radius: 8px;
+
+      font-size: 22px;
+      font-weight: 700;
+
+      margin-right: 15px;
+    }
+
+    /* Aprimo Logo */
+
+    .aprimo-logo {
+      width: 48px;
+      height: 48px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #ffffff;
+
+      border: 2px solid #1c1978;
+
+      color: #1c1978;
+
+      border-radius: 8px;
+
+      font-size: 17px;
+      font-weight: 700;
+
+      margin-right: 15px;
     }
 
 
@@ -269,18 +385,28 @@
 
     .project-card {
       height: 100%;
+
       background: #ffffff !important;
+
       border: 1px solid #e1e1e1 !important;
+
       border-radius: 15px;
+
       padding: 25px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+      box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+
       transition: 0.3s;
     }
 
     .project-card:hover {
       transform: translateY(-8px);
+
       border-color: #1c1978 !important;
-      box-shadow: 0 10px 30px rgba(28, 25, 120, 0.15);
+
+      box-shadow:
+        0 10px 30px rgba(28, 25, 120, 0.15);
     }
 
     .project-card h5 {
@@ -294,8 +420,11 @@
     .project-img {
       width: 100%;
       height: 220px;
+
       object-fit: cover;
+
       border-radius: 10px;
+
       border: 2px solid #1c1978;
     }
 
@@ -310,76 +439,113 @@
 
     .timeline {
       position: relative;
+
       max-width: 850px;
+
       margin: auto;
+
       padding-left: 40px;
     }
 
     .timeline::before {
       content: "";
+
       position: absolute;
+
       left: 10px;
+
       top: 0;
+
       width: 3px;
+
       height: 100%;
+
       background: #1c1978;
     }
 
     .timeline-item {
       position: relative;
+
       margin-bottom: 40px;
     }
 
     .timeline-dot {
       position: absolute;
+
       left: -38px;
+
       top: 25px;
+
       width: 18px;
+
       height: 18px;
+
       border-radius: 50%;
+
       background: #1c1978;
+
       border: 4px solid #ffffff;
-      box-shadow: 0 0 0 3px #1c1978;
+
+      box-shadow:
+        0 0 0 3px #1c1978;
     }
 
     .timeline-card {
       display: flex;
+
       gap: 20px;
+
       align-items: flex-start;
+
       background: #ffffff;
+
       border: 1px solid #e1e1e1;
+
       border-radius: 15px;
+
       padding: 25px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+      box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+
       transition: 0.3s;
     }
 
     .timeline-card:hover {
       transform: translateY(-5px);
+
       border-color: #1c1978;
-      box-shadow: 0 10px 30px rgba(28, 25, 120, 0.15);
+
+      box-shadow:
+        0 10px 30px rgba(28, 25, 120, 0.15);
     }
 
     .timeline-card img {
       width: 65px;
       height: 65px;
+
       object-fit: cover;
+
       border-radius: 50%;
+
       border: 2px solid #1c1978;
     }
 
     .timeline-content h5 {
       color: #1c1978 !important;
+
       margin-bottom: 8px;
     }
 
     .timeline-content p {
       margin-bottom: 3px;
+
       color: #555555 !important;
     }
 
     .education-year {
       color: #1c1978 !important;
+
       font-weight: 600;
     }
 
@@ -394,23 +560,35 @@
 
     .certificate-card {
       height: 100%;
+
       background: #ffffff !important;
+
       border: 1px solid #e1e1e1 !important;
+
       border-radius: 12px;
+
       padding: 20px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+      box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+
       transition: 0.3s;
     }
 
     .certificate-card:hover {
       transform: translateY(-8px);
+
       border-color: #1c1978 !important;
-      box-shadow: 0 10px 30px rgba(28, 25, 120, 0.15);
+
+      box-shadow:
+        0 10px 30px rgba(28, 25, 120, 0.15);
     }
 
     .certificate-card i {
       color: #1c1978 !important;
+
       font-size: 30px;
+
       margin-bottom: 10px;
     }
 
@@ -420,9 +598,13 @@
 
     .certificate-img {
       width: 100%;
+
       height: 180px;
+
       object-fit: cover;
+
       border-radius: 8px;
+
       border: 2px solid #1c1978;
     }
 
@@ -450,14 +632,19 @@
 
     #contactForm {
       max-width: 750px;
+
       margin: auto;
     }
 
     .form-control {
       background: #ffffff !important;
+
       color: #222222 !important;
+
       border: 1px solid #cccccc !important;
+
       padding: 14px;
+
       border-radius: 8px;
     }
 
@@ -467,7 +654,9 @@
 
     .form-control:focus {
       border-color: #1c1978 !important;
-      box-shadow: 0 0 8px rgba(28, 25, 120, 0.2) !important;
+
+      box-shadow:
+        0 0 8px rgba(28, 25, 120, 0.2) !important;
     }
 
 
@@ -477,19 +666,25 @@
 
     .connect-section {
       background: #ffffff;
+
       text-align: center;
+
       padding: 30px 0;
     }
 
     .connect-section h6 {
       color: #1c1978 !important;
+
       font-weight: 700;
     }
 
     .connect-section a {
       color: #555555 !important;
+
       font-size: 28px;
+
       margin: 0 12px;
+
       transition: 0.3s;
     }
 
@@ -504,12 +699,15 @@
 
     footer {
       background: #1c1978 !important;
+
       color: #ffffff !important;
+
       text-align: center;
     }
 
     footer p {
       color: #ffffff !important;
+
       margin: 0;
     }
 
@@ -549,12 +747,17 @@
         text-align: center;
       }
 
+      .skill-card h5 {
+        font-size: 0.9rem;
+      }
+
       .timeline {
         padding-left: 30px;
       }
 
       .timeline-card {
         flex-direction: column;
+
         text-align: center;
       }
 
@@ -569,6 +772,7 @@
     }
 
   </style>
+
 </head>
 
 
@@ -580,11 +784,13 @@
 ========================================= -->
 
 <nav class="navbar navbar-expand-lg fixed-top">
+
   <div class="container">
 
     <a class="navbar-brand" href="#home">
-      Sooraj
+      Sooraj R Nair
     </a>
+
 
     <button
       class="navbar-toggler"
@@ -596,46 +802,67 @@
 
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
+
+    <div
+      class="collapse navbar-collapse"
+      id="navbarNav">
 
       <ul class="navbar-nav ms-auto text-center">
 
         <li class="nav-item">
-          <a class="nav-link active" href="#home">Home</a>
+          <a class="nav-link active" href="#home">
+            Home
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#about">
+            About
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#skills">
+            Skills
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#projects">
+            Projects
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#experience">
+            Experience
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#certificates">Certificates</a>
+          <a class="nav-link" href="#certificates">
+            Certificates
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#education">Education</a>
+          <a class="nav-link" href="#education">
+            Education
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#hireme">Contact Me</a>
+          <a class="nav-link" href="#hireme">
+            Contact Me
+          </a>
         </li>
 
       </ul>
 
     </div>
+
   </div>
+
 </nav>
 
 
@@ -648,33 +875,54 @@
   <div class="container">
 
     <h1>
+
       Hi, I'm
-      <span class="gold-text">Sooraj</span>
+
+      <span class="gold-text">
+        Sooraj R Nair
+      </span>
+
     </h1>
 
+
     <div class="typing">
+
       <span id="typing-text"></span>
+
     </div>
 
+
     <div class="social-icons">
+
 
       <a
         href="https://www.linkedin.com/in/sooraj-r-nair-38757925a"
         target="_blank">
+
         <i class="fab fa-linkedin"></i>
+
       </a>
+
 
       <a
         href="https://github.com/sooraj-me"
         target="_blank">
+
         <i class="fab fa-github"></i>
+
       </a>
 
-      <a href="mailto:soorajshangu@gmail.com">
+
+      <a
+        href="mailto:soorajshangu@gmail.com">
+
         <i class="fas fa-envelope"></i>
+
       </a>
+
 
     </div>
+
 
     <a
       href="https://drive.google.com/file/d/10Wt_FDHO0xwAqRL5t9mtFagSeZX4bJAE/view?usp=drivesdk"
@@ -682,9 +930,11 @@
       class="btn btn-glow mt-4">
 
       <i class="fas fa-file-pdf"></i>
+
       View My Resume
 
     </a>
+
 
   </div>
 
@@ -699,24 +949,54 @@
 
   <div class="container text-center">
 
-    <h2>About Me</h2>
+    <h2>
+      About Me
+    </h2>
+
 
     <img
       src="https://i.postimg.cc/43FCz4z0/IMG-20250925-071719.jpg"
       alt="Sooraj R Nair"
       class="profile-img">
 
+
     <p class="about-text">
 
       Hello! I'm
-      <strong>Sooraj R Nair</strong>,
+
+      <strong>
+        Sooraj R Nair
+      </strong>,
+
       a passionate
-      <strong>Software Engineer</strong>
+
+      <strong>
+        Software Engineer
+      </strong>
+
       with expertise in
-      <strong>Python</strong>,
-      <strong>Artificial Intelligence</strong>,
+
+      <strong>
+        Python
+      </strong>,
+
+      <strong>
+        Adobe Workfront
+      </strong>,
+
+      <strong>
+        Adobe Workfront Fusion
+      </strong>,
+
+      <strong>
+        Aprimo
+      </strong>,
+
       automation, and
-      <strong>Data Structures and Algorithms</strong>.
+
+      <strong>
+        Artificial Intelligence
+      </strong>.
 
       I love building interactive, user-friendly applications
       and solving real-world problems through technology.
@@ -725,6 +1005,7 @@
       and aim to deliver high-quality and scalable solutions.
 
     </p>
+
 
   </div>
 
@@ -739,86 +1020,119 @@
 
   <div class="container text-center">
 
-    <h2>Skills</h2>
+    <h2>
+      Skills
+    </h2>
+
 
     <div class="row g-4 justify-content-center">
 
 
-      <div class="col-6 col-md-3">
+      <!-- PYTHON -->
+
+      <div class="col-12 col-sm-6 col-md-4">
+
         <div class="skill-card">
-          <i class="fab fa-html5 me-3"></i>
-          <h5>HTML</h5>
+
+          <i class="fab fa-python"></i>
+
+          <h5>
+            Python
+          </h5>
+
         </div>
+
       </div>
 
 
-      <div class="col-6 col-md-3">
+      <!-- ADOBE WORKFRONT -->
+
+      <div class="col-12 col-sm-6 col-md-4">
+
         <div class="skill-card">
-          <i class="fab fa-css3-alt me-3"></i>
-          <h5>CSS</h5>
+
+          <div class="workfront-logo">
+            W
+          </div>
+
+          <h5>
+            Adobe Workfront
+          </h5>
+
         </div>
+
       </div>
 
 
-      <div class="col-6 col-md-3">
+      <!-- ADOBE WORKFRONT FUSION -->
+
+      <div class="col-12 col-sm-6 col-md-4">
+
         <div class="skill-card">
-          <i class="fab fa-bootstrap me-3"></i>
-          <h5>Bootstrap</h5>
+
+          <div class="fusion-logo">
+            F
+          </div>
+
+          <h5>
+            Adobe Workfront Fusion
+          </h5>
+
         </div>
+
       </div>
 
 
-      <div class="col-6 col-md-3">
+      <!-- APRIMO -->
+
+      <div class="col-12 col-sm-6 col-md-4">
+
         <div class="skill-card">
-          <i class="fab fa-js me-3"></i>
-          <h5>JavaScript</h5>
+
+          <div class="aprimo-logo">
+            A
+          </div>
+
+          <h5>
+            Aprimo
+          </h5>
+
         </div>
+
       </div>
 
 
-      <div class="col-6 col-md-3">
+      <!-- ARTIFICIAL INTELLIGENCE -->
+
+      <div class="col-12 col-sm-6 col-md-4">
+
         <div class="skill-card">
-          <i class="fab fa-python me-3"></i>
-          <h5>Python</h5>
+
+          <i class="fas fa-brain skill-icon"></i>
+
+          <h5>
+            Artificial Intelligence
+          </h5>
+
         </div>
+
       </div>
 
 
-      <div class="col-6 col-md-3">
-        <div class="skill-card">
-          <i class="fas fa-code me-3"></i>
-          <h5>DSA</h5>
-        </div>
-      </div>
+      <!-- AUTOMATION -->
 
+      <div class="col-12 col-sm-6 col-md-4">
 
-      <div class="col-6 col-md-3">
         <div class="skill-card">
 
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg"
-            alt="MySQL"
-            style="width:32px;height:32px;"
-            class="me-3">
+          <i class="fas fa-gears skill-icon"></i>
 
-          <h5>MySQL</h5>
+          <h5>
+            Automation
+          </h5>
 
         </div>
-      </div>
 
-
-      <div class="col-6 col-md-3">
-        <div class="skill-card">
-
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg"
-            alt="Power BI"
-            style="width:32px;height:32px;"
-            class="me-3">
-
-          <h5>Power BI</h5>
-
-        </div>
       </div>
 
 
@@ -837,28 +1151,41 @@
 
   <div class="container text-center">
 
-    <h2>Projects</h2>
+    <h2>
+      Projects
+    </h2>
+
 
     <div class="row g-4">
 
 
+      <!-- PROJECT 1 -->
+
       <div class="col-md-6">
 
         <div class="project-card">
+
 
           <img
             src="https://i.postimg.cc/zXSBhwJr/Whats-App-Image-2025-09-03-at-21-18-27-95b120b0.jpg"
             class="project-img mb-3"
             alt="Find Movies App">
 
-          <h5>Find Movies App</h5>
+
+          <h5>
+            Find Movies App
+          </h5>
+
 
           <p>
+
             A web application that allows users to search and explore
             movies by title, genre, or popularity. Integrated with
             the TMDb API to fetch real-time movie data including
             posters, ratings, release year, and descriptions.
+
           </p>
+
 
           <a
             href="https://find-movies-app-sooraj.vercel.app/"
@@ -869,27 +1196,38 @@
 
           </a>
 
+
         </div>
 
       </div>
 
 
+      <!-- PROJECT 2 -->
+
       <div class="col-md-6">
 
         <div class="project-card">
+
 
           <img
             src="https://i.postimg.cc/6QPFqPgp/file.jpg"
             class="project-img mb-3"
             alt="File Sharing Application">
 
-          <h5>File Sharing Application</h5>
+
+          <h5>
+            File Sharing Application
+          </h5>
+
 
           <p>
+
             A cloud-based file sharing application built using
             the MERN stack. Users can upload files, generate
             unique download links, and share files without login.
+
           </p>
+
 
           <a
             href="https://filesharingapplication-9nss.onrender.com/"
@@ -900,37 +1238,55 @@
 
           </a>
 
+
         </div>
 
       </div>
 
 
+      <!-- PROJECT 3 -->
+
       <div class="col-md-6">
 
         <div class="project-card">
+
 
           <img
             src="https://i.postimg.cc/Qd9BZpNh/ai-chatbot-chat-ai-screenshot.avif"
             class="project-img mb-3"
             alt="RAG Chatbot">
 
-          <h5>Personal Chatbot using RAG</h5>
+
+          <h5>
+            Personal Chatbot using RAG
+          </h5>
+
 
           <p>
+
             AI-powered chatbot that uses Retrieval-Augmented
             Generation to provide context-aware answers from
             personal data and documents.
+
           </p>
+
 
           <span class="badge bg-warning text-dark">
             Ongoing
           </span>
 
+
           <br><br>
 
-          <button class="btn btn-secondary btn-sm" disabled>
+
+          <button
+            class="btn btn-secondary btn-sm"
+            disabled>
+
             Demo Coming Soon
+
           </button>
+
 
         </div>
 
@@ -952,94 +1308,153 @@
 
   <div class="container">
 
+
     <h2 class="text-center">
       Experience
     </h2>
 
+
     <div class="timeline">
 
+
+      <!-- EXPERIENCE 1 -->
 
       <div class="timeline-item">
 
         <div class="timeline-dot"></div>
 
+
         <div class="timeline-card">
+
 
           <img
             src="https://i.postimg.cc/XvkNCvWv/2fb2.webp"
             alt="GeoSensing Logo">
 
+
           <div class="timeline-content">
 
-            <h5>Deep Learning Intern</h5>
 
-            <p>GeoSensing & Imaging Consultancy</p>
+            <h5>
+              Deep Learning Intern
+            </h5>
 
-            <p>Trivandrum, Kerala</p>
+
+            <p>
+              GeoSensing & Imaging Consultancy
+            </p>
+
+
+            <p>
+              Trivandrum, Kerala
+            </p>
+
 
             <span class="education-year">
+
               October 2025 – Present
+
             </span>
 
+
           </div>
+
 
         </div>
 
       </div>
 
 
+      <!-- EXPERIENCE 2 -->
+
       <div class="timeline-item">
 
         <div class="timeline-dot"></div>
 
+
         <div class="timeline-card">
+
 
           <img
             src="https://i.postimg.cc/YCd0n3jp/images.jpg"
             alt="CopterCode Logo">
 
+
           <div class="timeline-content">
 
-            <h5>Software Developer Intern</h5>
 
-            <p>CopterCode, IIT Madras Research Park</p>
+            <h5>
+              Software Developer Intern
+            </h5>
 
-            <p>Chennai, Tamil Nadu</p>
+
+            <p>
+              CopterCode, IIT Madras Research Park
+            </p>
+
+
+            <p>
+              Chennai, Tamil Nadu
+            </p>
+
 
             <span class="education-year">
+
               July 2025 – August 2025
+
             </span>
 
+
           </div>
+
 
         </div>
 
       </div>
 
 
+      <!-- EXPERIENCE 3 -->
+
       <div class="timeline-item">
 
         <div class="timeline-dot"></div>
 
+
         <div class="timeline-card">
+
 
           <img
             src="https://i.postimg.cc/Hx2hXVB3/1633671283385.jpg"
             alt="Live Stream Technologies Logo">
 
+
           <div class="timeline-content">
 
-            <h5>Data Analyst Intern</h5>
 
-            <p>Live Stream Technologies</p>
+            <h5>
+              Data Analyst Intern
+            </h5>
 
-            <p>Coimbatore, Tamil Nadu</p>
+
+            <p>
+              Live Stream Technologies
+            </p>
+
+
+            <p>
+              Coimbatore, Tamil Nadu
+            </p>
+
 
             <span class="education-year">
+
               June 2024 – July 2024
+
             </span>
 
+
           </div>
+
 
         </div>
 
@@ -1061,10 +1476,16 @@
 
   <div class="container text-center">
 
-    <h2>Certificates</h2>
+
+    <h2>
+      Certificates
+    </h2>
+
 
     <div class="row g-4">
 
+
+      <!-- PYTHON -->
 
       <div class="col-md-6 col-lg-3">
 
@@ -1072,25 +1493,33 @@
           href="https://www.udemy.com/certificate/UC-344558b7-62c7-4b78-9bd2-a5baa07ef0ac/"
           target="_blank">
 
+
           <div class="certificate-card">
+
 
             <img
               src="https://i.postimg.cc/htY62wsR/python.jpg"
               class="certificate-img mb-3"
               alt="Python Certificate">
 
+
             <i class="fab fa-python"></i>
+
 
             <h6>
               Python Bootcamp Udemy Certificate
             </h6>
 
+
           </div>
+
 
         </a>
 
       </div>
 
+
+      <!-- IBM -->
 
       <div class="col-md-6 col-lg-3">
 
@@ -1098,25 +1527,33 @@
           href="https://coursera.org/share/23f1d217de16098a62e275f6eee59a27"
           target="_blank">
 
+
           <div class="certificate-card">
+
 
             <img
               src="https://i.postimg.cc/Wbg2jXLN/Screenshot-2025-09-14-212408.png"
               class="certificate-img mb-3"
               alt="Software Engineering Certificate">
 
+
             <i class="fas fa-laptop-code"></i>
+
 
             <h6>
               IBM Software Engineering Certificate
             </h6>
 
+
           </div>
+
 
         </a>
 
       </div>
 
+
+      <!-- MACHINE LEARNING -->
 
       <div class="col-md-6 col-lg-3">
 
@@ -1124,25 +1561,33 @@
           href="https://trainings.internshala.com/view_certificate/1d3q1sbhatk/2mgmvva66zq"
           target="_blank">
 
+
           <div class="certificate-card">
+
 
             <img
               src="https://i.postimg.cc/XNh57ks7/machine-learning.png"
               class="certificate-img mb-3"
               alt="Machine Learning Certificate">
 
+
             <i class="fas fa-robot"></i>
+
 
             <h6>
               Internshala Machine Learning Certificate
             </h6>
 
+
           </div>
+
 
         </a>
 
       </div>
 
+
+      <!-- NPTEL -->
 
       <div class="col-md-6 col-lg-3">
 
@@ -1150,20 +1595,26 @@
           href="https://archive.nptel.ac.in/content/noc/NOC25/SEM1/Ecertificates/106/noc25-cs44/Course/NPTEL25CS44S34360204704373703.pdf"
           target="_blank">
 
+
           <div class="certificate-card">
+
 
             <img
               src="https://i.postimg.cc/c6yTWsqc/Screenshot-2025-09-14-213417.png"
               class="certificate-img mb-3"
               alt="NPTEL Certificate">
 
+
             <i class="fas fa-certificate"></i>
+
 
             <h6>
               Internet of Things NPTEL Certificate
             </h6>
 
+
           </div>
+
 
         </a>
 
@@ -1185,121 +1636,168 @@
 
   <div class="container">
 
+
     <h2 class="text-center">
       Education
     </h2>
 
+
     <div class="timeline">
 
+
+      <!-- DEGREE -->
 
       <div class="timeline-item">
 
         <div class="timeline-dot"></div>
 
+
         <div class="timeline-card">
 
-          <div class="icon-box">
+
+          <div>
+
             <i
               class="fas fa-graduation-cap"
               style="font-size:35px;color:#1c1978;">
             </i>
+
           </div>
 
+
           <div class="timeline-content">
+
 
             <h5>
               Bachelor of Computer Science and Engineering
             </h5>
 
+
             <p>
               Sri Ramakrishna Institute of Technology
             </p>
+
 
             <p>
               Coimbatore, Tamil Nadu
             </p>
 
+
             <span class="education-year">
+
               2022 – 2026
+
             </span>
 
+
           </div>
+
 
         </div>
 
       </div>
 
 
+      <!-- HIGHER SECONDARY -->
+
       <div class="timeline-item">
 
         <div class="timeline-dot"></div>
 
+
         <div class="timeline-card">
 
-          <div class="icon-box">
+
+          <div>
+
             <i
               class="fas fa-school"
               style="font-size:35px;color:#1c1978;">
             </i>
+
           </div>
 
+
           <div class="timeline-content">
+
 
             <h5>
               Higher Secondary Education
             </h5>
 
+
             <p>
               Vasavi Vidyalaya Matriculation Higher Secondary School
             </p>
+
 
             <p>
               Tamil Nadu
             </p>
 
+
             <span class="education-year">
+
               2020 – 2022
+
             </span>
 
+
           </div>
+
 
         </div>
 
       </div>
 
 
+      <!-- SECONDARY -->
+
       <div class="timeline-item">
 
         <div class="timeline-dot"></div>
 
+
         <div class="timeline-card">
 
-          <div class="icon-box">
+
+          <div>
+
             <i
               class="fas fa-book-open"
               style="font-size:35px;color:#1c1978;">
             </i>
+
           </div>
 
+
           <div class="timeline-content">
+
 
             <h5>
               Secondary School Education
             </h5>
 
+
             <p>
               Vasavi Vidyalaya Matriculation Higher Secondary School
             </p>
+
 
             <p>
               Tamil Nadu
             </p>
 
+
             <span class="education-year">
+
               2020
+
             </span>
 
+
           </div>
+
 
         </div>
 
@@ -1321,19 +1819,26 @@
 
   <div class="container text-center">
 
-    <h2>Contact Me</h2>
+
+    <h2>
+      Contact Me
+    </h2>
+
 
     <form
       id="contactForm"
       action="https://api.web3forms.com/submit"
       method="POST">
 
+
       <input
         type="hidden"
         name="access_key"
-        value="204601a3-2ed4-42b8-96f6-cb8f763605d2">
+        value="204601a3-2ed4-42b8-96f6-cb8f763605d">
+
 
       <div class="row g-3">
+
 
         <div class="col-md-6">
 
@@ -1346,6 +1851,7 @@
 
         </div>
 
+
         <div class="col-md-6">
 
           <input
@@ -1357,6 +1863,7 @@
 
         </div>
 
+
         <div class="col-12">
 
           <textarea
@@ -1364,19 +1871,26 @@
             rows="5"
             class="form-control"
             placeholder="Message"
-            required>
-          </textarea>
+            required></textarea>
 
         </div>
 
+
       </div>
 
-      <button class="btn btn-glow w-100 mt-3">
+
+      <button
+        class="btn btn-glow w-100 mt-3">
+
         <i class="fas fa-paper-plane"></i>
+
         Send Message
+
       </button>
 
+
     </form>
+
 
   </div>
 
@@ -1389,13 +1903,17 @@
 
 <section class="connect-section">
 
+
   <div class="container">
+
 
     <h6>
       Connect with Me
     </h6>
 
+
     <div>
+
 
       <a
         href="https://www.linkedin.com/in/sooraj-r-nair-38757925a"
@@ -1405,6 +1923,7 @@
 
       </a>
 
+
       <a
         href="https://github.com/sooraj-me"
         target="_blank">
@@ -1413,15 +1932,20 @@
 
       </a>
 
-      <a href="mailto:soorajshangu@gmail.com">
+
+      <a
+        href="mailto:soorajshangu@gmail.com">
 
         <i class="fas fa-envelope"></i>
 
       </a>
 
+
     </div>
 
+
   </div>
+
 
 </section>
 
@@ -1432,22 +1956,38 @@
 
 <footer class="py-3">
 
+
   <p>
+
     Made with
     <span>❤</span>
     by Sooraj
+
   </p>
+
 
 </footer>
 
 
 <!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
 
 <!-- AOS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script
+  src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+</script>
+
 
 <script>
+
+  /* =========================================
+     AOS
+  ========================================= */
 
   AOS.init({
     duration: 1000,
@@ -1460,43 +2000,74 @@
   ========================================= */
 
   const texts = [
+
     "Software Engineer",
+
     "Python Programmer",
+
     "AI Enthusiast",
-    "Automation Developer"
+
+    "Automation Developer",
+
+    "Adobe Workfront Specialist",
+
+    "Workfront Fusion Developer"
+
   ];
 
+
   let count = 0;
+
   let index = 0;
+
   let currentText = "";
+
   let letter = "";
+
 
   function type() {
 
+
     if (count === texts.length) {
+
       count = 0;
+
     }
+
 
     currentText = texts[count];
 
+
     letter = currentText.slice(0, ++index);
 
-    document.getElementById("typing-text").textContent = letter;
+
+    document
+      .getElementById("typing-text")
+      .textContent = letter;
+
 
     if (letter.length === currentText.length) {
 
+
       count++;
+
       index = 0;
+
 
       setTimeout(type, 1500);
 
+
     } else {
+
 
       setTimeout(type, 100);
 
+
     }
 
+
   }
+
 
   type();
 
@@ -1507,40 +2078,71 @@
 
   document
     .getElementById("contactForm")
-    .addEventListener("submit", function(e) {
+    .addEventListener(
+      "submit",
+      function(e) {
 
-      e.preventDefault();
 
-      const form = this;
+        e.preventDefault();
 
-      fetch(form.action, {
-        method: form.method,
-        body: new FormData(form)
-      })
 
-      .then(response => {
+        const form = this;
 
-        if (response.ok) {
 
-          alert("Message sent successfully!");
+        fetch(
+          form.action,
+          {
+            method: form.method,
+            body: new FormData(form)
+          }
+        )
 
-          form.reset();
 
-        } else {
+        .then(
+          response => {
 
-          alert("Something went wrong. Please try again.");
 
-        }
+            if (response.ok) {
 
-      })
 
-      .catch(() => {
+              alert(
+                "Message sent successfully!"
+              );
 
-        alert("Network error. Please try later.");
 
-      });
+              form.reset();
 
-    });
+
+            } else {
+
+
+              alert(
+                "Something went wrong. Please try again."
+              );
+
+
+            }
+
+
+          }
+        )
+
+
+        .catch(
+          () => {
+
+
+            alert(
+              "Network error. Please try later."
+            );
+
+
+          }
+        );
+
+
+      }
+    );
 
 
 </script>
